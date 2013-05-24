@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Notable</string>
+	<string name="menu_settings">Configurações</string>
+	<string name="hint2">Criar um novo lembrete...</string>
+	<string name="more_apps">Mais aplicativos</string>
+	<string name="general">GERAL</string>
+	<string name="create_shortcut">Criar atalho na área de notificação.</string>
+	<string name="toggle_shortcut">Ativar atalho</string>
+	<string name="swiping_allow">Deslizar para apagar</string>
+	<string name="swiping_desc">Usar gesto de deslizar para marcar um lembrete como concluído.</string>
+	<string name="donate">Donate</string>
+	<string name="show_detail">Exibir tela de detalhes</string>
+	<string name="display_confirm">Exibe uma tela de detalhes ao tocar em um lembrete.</string>
+
+    <string name="extension_title">Notable Extension for DashClock</string>
+    <string name="extension_description">Shows your current reminders.</string>
+    <string name="settings">Configurações</string>
+    <string name="add">Criar</string> 
+    <string name="add_long">Criar um lembrete</string> 
+    <string name="edit">Editar</string> 
+    <string name="done">Concluído</string> 
+    
+    <string name="onclick_text">Ação ao tocar na notificação</string> 
+    <string name="onclick_description">O que fazer quando uma notificação é tocada</string> 
+    <string name="dismiss_reminder">Descartar lembrete</string>
+    <string name="hide_expandable_options">Mostrar botões expansíveis</string> 
+    <string name="hide_expadable_description">(Android 4.1+) Mostra ações quando uma notificação é expandida</string>
+</resources>

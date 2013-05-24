@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">نوت آبل</string>
+<string name="menu_settings">إعدادات</string>
+<string name="hint2">إضافة تذكير جديد...</string>
+<string name="more_apps">مزيد من البرامج</string>
+<string name="general">عام</string>
+<string name="create_shortcut">ضع اختصار في شريط التنبيهات</string>
+<string name="toggle_shortcut">تبديل الاختصار</string>
+<string name="swiping_allow">تمكين التمرير</string>
+<string name="swiping_desc">استعمل التمريرلتعليم التنبيه كمنجز</string>
+<string name="donate">دعم</string>                        
+<string name="show_detail">اظهر التفاصيل</string>
+<string name="display_confirm">أظهر شاشة التفاصيل عند النقر على التنبيه.</string>
+                                                                                               
+    <string name="extension_title">نوت آبل</string>
+    <string name="extension_description">عرض تذكيرك الحالي.</string>
+    <string name="settings">إعدادات</string>
+    <string name="add">إضافة</string> 
+    <string name="edit">تحرير</string> 
+    <string name="done">تم</string> 
+    <string name="onclick_text">التنبيهات عند النقر</string> 
+    <string name="onclick_description">مالذي يجب عمله عند النقر على التنبيه .</string> 
+    <string name="choose">Choose an option</string>                   
+    <string name="add_long">أضف تذكير</string> 
+    <string name="dismiss_reminder">استبعاد التذكير</string> 
+    <string name="hide_expandable_options">أظهر الازرار الموسعة</string> 
+    <string name="hide_expadable_description">(أندرويد 4.1+) أظهر الإجراءات عند توسيع التبيه</string>
+</resources>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Notable</string>
+<string name="menu_settings">Einstellungen</string>
+<string name="hint2">Neue Notiz...</string>
+<string name="more_apps">Mehr Apps</string>
+<string name="general">Allgemein</string>
+<string name="create_shortcut">Eine Verknüpfung in der Benachrichtigungsleiste anzeigen</string>
+<string name="toggle_shortcut">Schnellzugriff</string>
+<string name="swiping_allow">Wischen erlauben</string>
+<string name="swiping_desc">Wischgeste verwenden um Benachrichtigung als erledigt zu markieren</string>
+<string name="donate">Spenden</string>
+<string name="show_detail">Detailfenster anzeigen</string>
+<string name="display_confirm">Beim Tippen auf die Benachtichtigung ein Detailfenster anzeigen.</string>
+
+<string name="extension_title">Notable Erweiterung für DashClock</string>
+<string name="extension_description">Zeigt ihre aktuellen Erinnerungen an.</string>
+<string name="settings">Einstellungen</string>
+<string name="add">Hinzufügen</string> 
+<string name="edit">Bearbeiten</string> 
+<string name="done">Erledigt</string> 
+<string name="onclick_text">Tippen auf die Benachrichtigung</string> 
+<string name="onclick_description">Aktion beim Tippen auf eine Benachrichtigung auswählen.</string> 
+<string name="choose">Eine Option auswählen</string> 
+<string name="add_long">Erinnerung hinzufügen</string> 
+<string name="dismiss_reminder">Erinnerung löschen</string>
+</resources>

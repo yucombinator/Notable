@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Notable</string>
+	<string name="menu_settings">Nastavitve</string>
+	<string name="hint2">Dodaj nov opomin...</string>
+	<string name="more_apps">Več aplikacij</string>
+	<string name="general">Splošno</string>
+	<string name="create_shortcut">Ustvari bližnjico med obvestili</string>
+	<string name="toggle_shortcut">Omogoči bližnjico</string>
+	<string name="swiping_allow">Dovoli podrsavanje</string>
+	<string name="swiping_desc">Podrsaj obvestilo, da ga označiš kot končano.</string>
+	<string name="donate">Doniraj</string>
+	<string name="show_detail">Prikaži podrobnosti</string>
+	<string name="display_confirm">Prikaži podrobnosti, ko klikneš na obvestilo.</string>
+
+	<string name="extension_title">Notable dodatek za DashClock</string>
+	<string name="extension_description">Prikaži trenutne opomine.</string>
+	<string name="settings">Nastavitve</string>
+	<string name="add">Dodaj</string>
+	<string name="edit">Uredi</string>
+	<string name="done">Končano</string>
+	<string name="onclick_text">Obvestilo ob kliku</string>
+	<string name="onclick_description">Kaj storiti, ko klikneš obvestilo.</string>
+	<string name="choose">Izberi možnost</string>
+	<string name="add_long">Dodaj opomin</string>
+    <string name="dismiss_reminder">Opusti opomin</string>
+        <string name="hide_expandable_options">Prikaži razširljive gumbe</string> 
+    <string name="hide_expadable_description">(Android 4.1+) Prikaže dejanja, ko je obvestilo razširjeno</string>
+</resources>

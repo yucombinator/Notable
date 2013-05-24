@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<string name="app_name">Notable</string>
+<string name="menu_settings">设置</string>
+<string name="hint2">新增提醒事项</string>
+<string name="more_apps">来自开发者的更多应用</string>
+<string name="general">通用</string>
+<string name="create_shortcut">在通知栏中创建快捷方式</string>
+<string name="toggle_shortcut">快捷方式开关</string>
+<string name="swiping_allow">允许滑动</string>
+<string name="swiping_desc">将提醒事项滑出通知栏以标记为完成</string>
+<string name="donate">捐助</string>
+<string name="show_detail">显示详情面板</string>
+<string name="display_confirm">点击提醒事项通知时打开详细信息窗口</string>
+    <string name="extension_title">Notable 插件</string>
+    <string name="extension_description">此插件将显示您当前的提醒事项</string>
+    <string name="settings">设置</string>
+    <string name="add">添加</string>
+    <string name="edit">编辑</string>
+    <string name="done">完成</string>
+    <string name="onclick_text">通知项目的点击操作</string>
+    <string name="onclick_description">选择当点击提醒事项通知时的操作</string>
+    <string name="choose">点击通知项目后……</string>
+    <string name="add_long">新增一个提醒事项</string>
+    <string name="dismiss_reminder">忽略提醒</string>
+    <string name="hide_expandable_options">通知项目的展开操作</string>
+    <string name="hide_expadable_description">[仅适用于 Android 4.1+] 当展开通知项目时显示更多操作按钮</string>
+</resources>

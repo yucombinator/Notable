@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<attr name="ic_send_disabled" format="reference"/>
+<attr name="ic_send" format="reference"/>
+<attr name="ic_action_back" format="reference"/>
+<attr name="ic_action_done" format="reference"/>
+<attr name="ic_action_edit" format="reference"/>
+</resources>

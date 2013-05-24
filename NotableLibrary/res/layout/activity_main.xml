@@ -1,0 +1,149 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:layout_marginBottom="15dp">
+
+    <LinearLayout
+        android:id="@+id/titleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:gravity="bottom|top"
+        android:layout_margin="15dp" >
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/Title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/app_name"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <ImageButton
+            android:id="@+id/menuBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?selectableItemBackground"
+            android:onClick="menuBtn"
+            android:src="@drawable/ic_menu_moreoverflow_normal_holo_light" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/titleLayout"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="15dp" 
+        android:paddingRight="15dp" 
+        android:background="@color/gray">
+
+        <ImageButton
+            android:id="@+id/checkmark_gray"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingTop="10dp" 
+            android:paddingBottom="10dp" 
+            android:background="?selectableItemBackground"
+            android:src="@drawable/ic_checkmark_gray" />
+
+        <View
+            android:layout_width="2px"
+            android:layout_height="fill_parent"
+            android:background="#90909090" />
+
+        <ImageButton
+            android:id="@+id/checkmark_green"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingTop="10dp" 
+            android:paddingBottom="10dp" 
+            android:background="?selectableItemBackground"
+            android:src="@drawable/ic_checkmark_green" />
+
+        <View
+            android:layout_width="2px"
+            android:layout_height="fill_parent"
+            android:background="#90909090" />
+
+        <ImageButton
+            android:id="@+id/checkmark_orange"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingTop="10dp" 
+            android:paddingBottom="10dp" 
+            android:background="?selectableItemBackground"
+            android:src="@drawable/ic_checkmark_orange" />
+        
+                <View
+            android:layout_width="2px"
+            android:layout_height="fill_parent"
+            android:background="#90909090" />
+
+        <ImageButton
+            android:id="@+id/checkmark_red"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingTop="10dp" 
+            android:paddingBottom="10dp" 
+            android:background="?selectableItemBackground"
+            android:src="@drawable/ic_checkmark_red" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/linearLayout2"
+        android:gravity="bottom"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="25dp" >
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+           <!-- style="@style/BoxStyle"  -->    
+            <EditText
+				android:padding="7dp"
+                android:id="@+id/entryText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint2" />
+
+            <ImageButton
+                android:id="@+id/voiceBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:background="?selectableItemBackground"
+                android:onClick="startVoiceRecognition"
+                android:src="@drawable/ic_voice_search_api_holo_light" />
+        </RelativeLayout>
+
+        <ImageButton
+            android:id="@+id/addBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="?selectableItemBackground"
+            android:clickable="false"
+            android:enabled="false"
+            android:onClick="addBtn"
+            android:src="?attr/ic_send_disabled" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>
