@@ -5,4 +5,5 @@
 <attr name="ic_action_back" format="reference"/>
 <attr name="ic_action_done" format="reference"/>
 <attr name="ic_action_edit" format="reference"/>
+<attr name="ic_menu_moreoverflow" format="reference"/>
 </resources>

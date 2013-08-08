@@ -230,7 +230,15 @@ public class MainActivity
     }
     
     public void menuBtn(View v){
-    	openOptionsMenu();
+    	if(getApplicationContext().getPackageName().contains("pro")){
+			// launch prefs
+            Intent gopref = new Intent(this, PreferencesActivity.class);
+			gopref.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+			startActivity(gopref);
+    	}else{
+    		openOptionsMenu();
+    	}
+    	
     }
 
     void afterViews() {

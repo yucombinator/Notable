@@ -32,6 +32,7 @@
 		                <item name="ic_action_back" >@drawable/ic_action_back_dark</item>
 		                <item name="ic_action_done" >@drawable/ic_action_done_dark</item>
 		                <item name="ic_action_edit" >@drawable/ic_action_edit_dark</item>
+		                <item name="ic_menu_moreoverflow">@drawable/ic_menu_moreoverflow_normal_holo_dark</item>
 		    </style>
 		    
 			<style name="TransAppTheme" parent="@style/Theme.Sherlock.Light.NoActionBar">
@@ -60,6 +61,7 @@
 		                <item name="ic_action_back" >@drawable/ic_action_back</item>
 		                <item name="ic_action_done" >@drawable/ic_action_done</item>
 		                <item name="ic_action_edit" >@drawable/ic_action_edit_light</item>
+		                <item name="ic_menu_moreoverflow" >@drawable/ic_menu_moreoverflow_normal_holo_light</item>
 			  </style>
 		<style name="Title">
 	        <item name="android:textSize">28sp</item>

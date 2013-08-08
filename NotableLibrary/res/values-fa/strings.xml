@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name">Notable</string>
+	<string name="menu_settings">تنظیمات</string>
+	<string name="hint2">افزودن یادآور جدید...</string>
+	<string name="more_apps">برنامه های بیشتر</string>
+	<string name="general">کلی</string>
+	<string name="create_shortcut">ایجا یک میانبر در نوار اعلان</string>
+	<string name="toggle_shortcut">فعال/غیر فعال کردن میانبر</string>
+	<string name="swiping_allow">کشیدن مجاز</string>
+	<string name="swiping_desc">با کشیدن اعلان آن را انجام شده بداند</string>
+	<string name="donate">هدیه</string>
+	<string name="show_detail">نمایش جزئیات</string>
+	<string name="display_confirm">نمایش جزئیات با کلیک بر روی اعلان</string>
+
+    <string name="extension_title">Notable</string>
+    <string name="extension_description">نمایش یادآور های کنونی شما</string>
+    <string name="settings">تنظیمات</string>
+    <string name="add">افزودن</string> 
+    <string name="edit">ویرایش</string> 
+    <string name="done">انجام شد</string> 
+    <string name="onclick_text">اعلان هنگام کلیک</string> 
+    <string name="onclick_description">چکاری باید انجام شود وقتی اعلان کلیک شد</string> 
+    <string name="choose">انتخاب یک گزینه</string> 
+    <string name="add_long">افزودن یک یادآور</string> 
+    <string name="dismiss_reminder">نادیده گرفتن یادآور</string> 
+    <string name="hide_expandable_options">نمایش دکمه های قابل گسترش</string> 
+    <string name="hide_expadable_description">(اندروید 4.1+) نمایش دکمه ها زمانیکه اعلان گسترش یافته است</string>
+</resources>

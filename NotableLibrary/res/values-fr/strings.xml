@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <resources>
+
+<string name="app_name">Notable</string>
+<string name="menu_settings">Paramètres</string>
+<string name="hint2">Ajouter un mémo ...</string>
+<string name="more_apps">Plus d\'applis</string>
+<string name="general">Général</string>
+<string name="create_shortcut">Créer un raccourci dans la barre des notifications</string>
+<string name="toggle_shortcut">Raccourci</string>
+<string name="swiping_allow">Autoriser le glissé</string>
+<string name="swiping_desc">Utiliser le glissé pour marquer un mémo effectué</string>
+<string name="donate">Don</string>
+<string name="show_detail">Afficher les détails</string>
+<string name="display_confirm">Afficher les détails du mémo sélecté.</string>
+
+
+    <string name="extension_title">Notable</string>
+    <string name="extension_description">Afficher les mémos en cours.</string>
+    <string name="settings">Paramètres</string>
+    <string name="add">Ajouter</string> 
+    <string name="edit">Editer</string> 
+    <string name="done">Terminé</string> 
+    <string name="onclick_text">Notification sur clic</string> 
+    <string name="onclick_description">Que faire sur une notification.</string> 
+    <string name="choose">Choisir une option</string> 
+    <string name="add_long">Ajouter un mémo ...</string> 
+    <string name="dismiss_reminder">Supprimer un mémo ...</string> 
+    <string name="hide_expandable_options">Afficher les commandes extensibles</string> 
+    <string name="hide_expadable_description">(Android 4.1+) Afficher les commandes sur mémo développé</string>
+    
+    <string name="DarkTheme">Thème obscur</string>
+    <string name="donate_only">Pour les donateurs seulement</string>
+    
+</resources>

@@ -29,14 +29,14 @@ public final class NotificationService_
     }
 
     @Override
-    public void bootAdd() {
+    public void delete(final int id) {
         BackgroundExecutor.execute(new Runnable() {
 
 
             @Override
             public void run() {
                 try {
-                    NotificationService_.super.bootAdd();
+                    NotificationService_.super.delete(id);
                 } catch (RuntimeException e) {
                     Log.e("NotificationService_", "A runtime exception was thrown while executing code in a runnable", e);
                 }
@@ -47,14 +47,14 @@ public final class NotificationService_
     }
 
     @Override
-    public void delete(final int id) {
+    public void bootAdd() {
         BackgroundExecutor.execute(new Runnable() {
 
 
             @Override
             public void run() {
                 try {
-                    NotificationService_.super.delete(id);
+                    NotificationService_.super.bootAdd();
                 } catch (RuntimeException e) {
                     Log.e("NotificationService_", "A runtime exception was thrown while executing code in a runnable", e);
                 }

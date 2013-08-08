@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Notable</string>
+    <string name="menu_settings">Настройки</string>
+    <string name="hint2">Новое напоминание...</string>
+    <string name="more_apps">Другие приложения</string>
+    <string name="general">Основные</string>
+    <string name="create_shortcut">Создает ярлык в панели уведомлений</string>
+    <string name="toggle_shortcut">Быстрый доступ</string>
+    <string name="swiping_allow">Разрешить жесты</string>
+    <string name="swiping_desc">Сдвиньте уведомление чтобы пометить как выполненное</string>
+    <string name="donate">Пожертвовать</string>
+    <string name="show_detail">Показать детали</string>
+    <string name="display_confirm">Отображает окно подробностей при нажатии на уведомление.</string>
+    <string name="extension_title">Notable</string>
+    <string name="extension_description">Отображает текущее напоминание.</string>
+    <string name="settings">Настройки</string>
+    <string name="add">Добавить</string>
+    <string name="edit">Изменить</string>
+    <string name="done">Выполнено</string>
+    <string name="onclick_text">Действие при нажатии</string>
+    <string name="onclick_description">Что делать при нажатии на уведомление.</string>
+    <string name="choose">Выберите вариант</string>
+    <string name="add_long">Добавить напоминание</string>
+    <string name="dismiss_reminder">Сбросить напоминание</string>
+    <string name="hide_expandable_options">Расширяемые кнопки</string>
+    <string name="hide_expadable_description">(Android 4.1+) Показать кнопки действия при расширении уведомления</string>
+    <string name="low_prio">Понизить приоритет</string>
+    <string name="low_prio_info">(Andrid 4.1+) Отображает уведомления в конце списка.</string>
+    <string name="DarkTheme">Темная тема</string>
+    <string name="donate_only">Только пожертвовавшим</string>
+</resources>

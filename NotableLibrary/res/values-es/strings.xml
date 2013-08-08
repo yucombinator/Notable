@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<string name="app_name">Notable</string>
+ 
+	<string name="menu_settings">Ajustes</string>
+                                                             
+
+	<string name="hint2">Añadir un nuevo aviso...</string>
+                                            
+                                         
+	<string name="more_apps">Mas apps</string>
+                                                      
+  
+	<string name="general">General</string>
+
+ 
+	<string name="create_shortcut">Crear acceso directo en la barra de notificaciones</string>
+                                                            
+ 
+	<string name="toggle_shortcut">Activar acceso directo</string>
+                                                            
+ 
+	<string name="swiping_allow">Activar barrido</string>
+                                                         
+ 
+	<string name="swiping_desc">Un barrido marca una notificacion como ya realizada</string>
+                                                         
+
+	<string name="donate">Donar</string>
+                                            
+
+	<string name="show_detail">Mostrar detalles</string>
+                                                       
+
+	<string name="display_confirm">Mostrar detalles al pulsar una notificacion.</string>
+                                                        
+ 
+    <string name="extension_title">Notable</string>
+    <string name="extension_description">Muestra tus avisos vigentes.</string>
+                                                                 
+ 
+    <string name="settings">Ajustes</string>
+                                             
+ 
+    <string name="add">Añadir</string> 
+                                      
+
+    <string name="edit">Editar</string> 
+                                       
+ 
+    <string name="done">Hecho</string>
+                                         
+ 
+    <string name="onclick_text">Pulsar notificacion</string> 
+                                                   
+ 
+    <string name="onclick_description">Que hacer al pulsar una notificacion</string> 
+                                                            
+    <string name="choose">Elige una opcion</string> 
+                                            
+ 
+    <string name="add_long">Añadir un aviso</string>
+ 
+    <string name="dismiss_reminder">Rechazar aviso</string> 
+                                                           
+ 
+    <string name="hide_expandable_options">Mostrar botones expansibles</string> 
+                                                                     
+ 
+    <string name="hide_expadable_description">(Android 4.1+) Mostrar acciones cuando se expande una notificacion</string>
+                                                                                               
+ 
+</resources>

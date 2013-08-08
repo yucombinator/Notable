@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+ <string name="app_name">Notable</string>
+ <string name="menu_settings">Ayarlar</string>
+ <string name="hint2">Yeni bir hatırlatma ekle...</string>
+ <string name="more_apps">Daha Çok Uyg</string>
+ <string name="general">Genel</string>
+ <string name="create_shortcut">Bildirim çubuğunda kısayol oluştur</string>
+ <string name="toggle_shortcut">Geçiş kısayolu</string>
+ <string name="swiping_allow">Kaydırmaya izin ver</string>
+ <string name="swiping_desc">Yapılan bir bildirimi işaretlemek için kaydırma hareketini kullanın</string>
+ <string name="donate">Bağış</string>
+ <string name="show_detail">Detay ekranını göster</string>
+ <string name="display_confirm">Bir bildirime tıkladığınızda detay ekranını görüntüleyin.</string>
+
+    <string name="extension_title">Notable</string>
+    <string name="extension_description">Mevcut hatırlatmaların görüntülenir.</string>
+    <string name="settings">Ayarlar</string>
+    <string name="add">Ekle</string> 
+    <string name="edit">Düzenle</string> 
+    <string name="done">Tamam</string> 
+    <string name="onclick_text">Eyleme tıklama bildirimi</string> 
+    <string name="onclick_description">Bir bildirim tıklandığında ne yapılcak.</string> 
+    <string name="choose">Bir seçenek seçin</string> 
+    <string name="add_long">Hatırlatma ekle</string> 
+    <string name="dismiss_reminder">Hatırlatmayı reddet</string> 
+    <string name="hide_expandable_options">Genişletilebilir butonları göster</string> 
+    <string name="hide_expadable_description">(Android 4.1+) Bir bildirim genişletildiğinde eylemleri göster</string>
+</resources>
