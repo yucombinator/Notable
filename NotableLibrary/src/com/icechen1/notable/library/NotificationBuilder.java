@@ -124,7 +124,7 @@ public class NotificationBuilder {
     	String[] input = item.getLongText().toString().split("\n");
     	String secondLine;
     	if (input.length < 2 && input[0].length() < 20){
-    		secondLine = "Notable";
+    		secondLine = "";
     	}else{
     		secondLine = input[0];
     	}
@@ -176,7 +176,7 @@ public class NotificationBuilder {
 			.addAction(R.drawable.ic_action_ic_edit, cxt.getResources().getString(R.string.edit), jIntent)
 			.addAction(R.drawable.ic_action_ic_done, cxt.getResources().getString(R.string.done), spIntent)
 			.setStyle(new NotificationCompat.BigTextStyle().bigText(item.getLongText())) 
-			.setTicker(item.getTitle() + " : " + secondLine)
+			.setTicker(secondLine.isEmpty() ? item.getTitle() : item.getTitle() + " : " + secondLine)
 			.setPriority(Notification.PRIORITY_HIGH)
 			// setUsesChronometer option which subindication to display
 			.setWhen(item.getTime())

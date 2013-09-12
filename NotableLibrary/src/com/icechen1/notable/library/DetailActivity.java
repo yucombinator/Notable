@@ -5,13 +5,11 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.TextView;
 
 import com.actionbarsherlock.app.SherlockActivity;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
-import com.googlecode.androidannotations.annotations.AfterViews;
 import com.googlecode.androidannotations.annotations.EActivity;
 import com.googlecode.androidannotations.annotations.ViewById;
 import com.icechen1.notable.library.MainActivity_;
@@ -83,8 +81,6 @@ public class DetailActivity extends SherlockActivity{
 		datasource.close();
 		//Log.i(TAG, item.getLongText());
     	String newLine = System.getProperty("line.separator");
-       	String longText = "Notable"; 
-       	
        	String text = item.getTitle();
        	String text_long = null;
        	if (!item.getLongText().equals("Notable")){
