@@ -7,7 +7,6 @@
 		android:minSdkVersion="7"
 		android:targetSdkVersion="17" />
 	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" /> 
-		
 
 	<application
 	    android:allowBackup="true"
@@ -15,7 +14,7 @@
         android:theme="@style/TransAppTheme" 
 		android:name="NotableApplication"
 		android:label="@string/app_name" >
-		<activity
+		<activity android:permission="com.google.android.gm.permission.AUTO_SEND"
 			android:name="com.icechen1.notable.library.MainActivity_"
 			android:label="@string/app_name" android:screenOrientation="unspecified">
 			<intent-filter>
@@ -24,9 +23,10 @@
 			</intent-filter>
 			<intent-filter>
             	<action android:name="android.intent.action.SEND" />
+            	<action android:name="com.google.android.gm.action.AUTO_SEND" />
             	<category android:name="android.intent.category.DEFAULT" />
-            	<data android:mimeType="text/plain" />
-        </intent-filter>
+            	<data android:mimeType="text/*" />
+			</intent-filter>
 		</activity>
 		<service android:label="NotificationService" android:name="com.icechen1.notable.library.NotificationService_"></service>	
 	    <receiver android:name=".DeviceBootListener">

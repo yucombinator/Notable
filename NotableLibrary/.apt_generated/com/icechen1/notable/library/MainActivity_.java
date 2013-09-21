@@ -35,6 +35,21 @@ public final class MainActivity_
         checkmark_gray = ((ImageButton) findViewById(id.checkmark_gray));
         checkmark_orange = ((ImageButton) findViewById(id.checkmark_orange));
         {
+            View view = findViewById(id.checkmark_gray);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    @Override
+                    public void onClick(View view) {
+                        MainActivity_.this.checkmark_gray();
+                    }
+
+                }
+                );
+            }
+        }
+        {
             View view = findViewById(id.checkmark_orange);
             if (view!= null) {
                 view.setOnClickListener(new OnClickListener() {
@@ -43,21 +58,6 @@ public final class MainActivity_
                     @Override
                     public void onClick(View view) {
                         MainActivity_.this.checkmark_orange();
-                    }
-
-                }
-                );
-            }
-        }
-        {
-            View view = findViewById(id.checkmark_green);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    @Override
-                    public void onClick(View view) {
-                        MainActivity_.this.checkmark_green();
                     }
 
                 }
@@ -80,14 +80,14 @@ public final class MainActivity_
             }
         }
         {
-            View view = findViewById(id.checkmark_gray);
+            View view = findViewById(id.checkmark_green);
             if (view!= null) {
                 view.setOnClickListener(new OnClickListener() {
 
 
                     @Override
                     public void onClick(View view) {
-                        MainActivity_.this.checkmark_gray();
+                        MainActivity_.this.checkmark_green();
                     }
 
                 }

@@ -119,6 +119,7 @@
                 android:id="@+id/entryText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:inputType="textCapSentences|textMultiLine"
                 android:hint="@string/hint2" />
 
             <ImageButton

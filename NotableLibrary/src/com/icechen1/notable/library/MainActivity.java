@@ -121,6 +121,18 @@ public class MainActivity
 	            }
 	        }
 	    } else {
+	    	if(("com.google.android.gm.action.AUTO_SEND").equals(action) && type != null){
+	    		//automatically save the note then close
+	        	String sharedText = intent.getStringExtra(Intent.EXTRA_TEXT);
+	            if (sharedText != null) {
+	            	share_info = sharedText;
+	            	shareFields(share_info);
+	            	icon = "checkmark_gray";
+	            	addBtn(null);
+	            }
+	    	}else{
+	    		
+	    	}
 	        // Handle other intents, such as being started from the home screen
 	    }
 	    afterViews();
