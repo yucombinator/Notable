@@ -30,25 +30,10 @@ public final class MainActivity_
     }
 
     private void afterSetContentView_() {
-        checkmark_green = ((ImageButton) findViewById(id.checkmark_green));
-        checkmark_red = ((ImageButton) findViewById(id.checkmark_red));
         checkmark_gray = ((ImageButton) findViewById(id.checkmark_gray));
         checkmark_orange = ((ImageButton) findViewById(id.checkmark_orange));
-        {
-            View view = findViewById(id.checkmark_gray);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    @Override
-                    public void onClick(View view) {
-                        MainActivity_.this.checkmark_gray();
-                    }
-
-                }
-                );
-            }
-        }
+        checkmark_red = ((ImageButton) findViewById(id.checkmark_red));
+        checkmark_green = ((ImageButton) findViewById(id.checkmark_green));
         {
             View view = findViewById(id.checkmark_orange);
             if (view!= null) {
@@ -65,14 +50,14 @@ public final class MainActivity_
             }
         }
         {
-            View view = findViewById(id.checkmark_red);
+            View view = findViewById(id.checkmark_gray);
             if (view!= null) {
                 view.setOnClickListener(new OnClickListener() {
 
 
                     @Override
                     public void onClick(View view) {
-                        MainActivity_.this.checkmark_red();
+                        MainActivity_.this.checkmark_gray();
                     }
 
                 }
@@ -88,6 +73,21 @@ public final class MainActivity_
                     @Override
                     public void onClick(View view) {
                         MainActivity_.this.checkmark_green();
+                    }
+
+                }
+                );
+            }
+        }
+        {
+            View view = findViewById(id.checkmark_red);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    @Override
+                    public void onClick(View view) {
+                        MainActivity_.this.checkmark_red();
                     }
 
                 }
