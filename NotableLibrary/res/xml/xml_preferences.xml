@@ -1,14 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
-    <PreferenceCategory android:title="@string/general">
-        <ListPreference android:key="onClickAction" android:summary="@string/onclick_description" android:title="@string/onclick_text" android:entries="@array/onclick_action" android:entryValues="@array/onclick_action_values" android:dialogTitle="@string/choose" android:defaultValue="2" /><CheckBoxPreference android:key="shortcut" android:title="@string/toggle_shortcut" android:summary="@string/create_shortcut" android:enabled="true" android:defaultValue="true"/>
-    <CheckBoxPreference android:summary="@string/hide_expadable_description" android:title="@string/hide_expandable_options" android:defaultValue="true" android:key="expand_buttons" /><CheckBoxPreference android:defaultValue="false" android:key="swipe" android:summary="@string/swiping_desc" android:title="@string/swiping_allow" />
-    <CheckBoxPreference android:key="low_prio" android:title="@string/low_prio" android:summary="@string/low_prio_info" android:defaultValue="false"/>
-    <CheckBoxPreference android:enabled="false" android:key="dark_theme" android:title="@string/DarkTheme" android:summary="@string/donate_only"/>
-    
-    
-</PreferenceCategory>
-    
-    
+
+    <PreferenceCategory android:title="@string/general" >
+        <ListPreference
+            android:defaultValue="2"
+            android:dialogTitle="@string/choose"
+            android:entries="@array/onclick_action"
+            android:entryValues="@array/onclick_action_values"
+            android:key="onClickAction"
+            android:summary="@string/onclick_description"
+            android:title="@string/onclick_text" />
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:enabled="true"
+            android:key="shortcut"
+            android:summary="@string/create_shortcut"
+            android:title="@string/toggle_shortcut" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="expand_buttons"
+            android:summary="@string/hide_expadable_description"
+            android:title="@string/hide_expandable_options" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="swipe"
+            android:summary="@string/swiping_desc"
+            android:title="@string/swiping_allow" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="low_prio"
+            android:summary="@string/low_prio_info"
+            android:title="@string/low_prio" />
+        <CheckBoxPreference
+            android:enabled="false"
+            android:key="dark_theme"
+            android:summary="@string/donate_only"
+            android:title="@string/DarkTheme" />
+    </PreferenceCategory>
 
 </PreferenceScreen>
