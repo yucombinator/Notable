@@ -127,7 +127,7 @@ public class NotificationDataSource {
 		  public static final String COLUMN_TIME = "time";
 
 		  private static final String DATABASE_NAME = "notifs.db";
-		  private static final int DATABASE_VERSION = 4;
+		  private static final int DATABASE_VERSION = 5;
 
 		  // Database creation sql statement
 		  private static final String DATABASE_CREATE = "create table "
@@ -149,11 +149,17 @@ public class NotificationDataSource {
 
 		  @Override
 		  public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-		    Log.w(SQLiteHelper.class.getName(),
-		        "Upgrading database from version " + oldVersion + " to "
-		            + newVersion + ", which will destroy all old data");
-		    db.execSQL("DROP TABLE IF EXISTS " + TABLE_NOTIFS);
-		    onCreate(db);
+			  Log.i(SQLiteHelper.class.getName(), "Upgrading database from version " +
+						oldVersion + " to " + newVersion);
+			if (oldVersion < 4) {
+				Log.w(SQLiteHelper.class.getName(), "Recreating database");
+				db.execSQL("DROP TABLE IF EXISTS " + TABLE_NOTIFS);
+				onCreate(db);
+			} else {
+				if (oldVersion < 5)
+					db.execSQL("UPDATE " + TABLE_NOTIFS + " SET " + COLUMN_LONGTEXT +
+							" = '' WHERE " + COLUMN_LONGTEXT + " = 'Notable'");
+			}
 		  }
 
 		} 

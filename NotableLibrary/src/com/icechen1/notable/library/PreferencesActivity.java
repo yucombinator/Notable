@@ -8,7 +8,9 @@ import com.icechen1.notable.library.NotificationService_;
 import android.app.NotificationManager;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
+import android.preference.CheckBoxPreference;
 
  public class PreferencesActivity extends SherlockPreferenceActivity  {
 	 
@@ -21,6 +23,11 @@ import android.os.Bundle;
         getSupportActionBar().setHomeButtonEnabled(true);
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
+        if (Build.VERSION.SDK_INT < 16) {
+        	CheckBoxPreference expandPref = (CheckBoxPreference) findPreference("expand_buttons");
+        	expandPref.setEnabled(false);
+        	expandPref.setChecked(false);
+        }
     }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

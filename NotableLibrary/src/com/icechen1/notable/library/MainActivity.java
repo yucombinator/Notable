@@ -3,25 +3,15 @@ package com.icechen1.notable.library;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.atomic.AtomicInteger;
-
-import android.R.color;
-import android.app.Notification;
 import android.app.NotificationManager;
-import android.app.PendingIntent;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.content.res.TypedArray;
-import android.graphics.BitmapFactory;
-import android.graphics.PorterDuff.Mode;
-import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.speech.RecognizerIntent;
-import android.support.v4.app.NotificationCompat;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
@@ -31,15 +21,11 @@ import android.view.WindowManager.LayoutParams;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.TextView;
-
 import com.actionbarsherlock.app.SherlockActivity;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
-import com.googlecode.androidannotations.annotations.AfterViews;
 import com.googlecode.androidannotations.annotations.Click;
 import com.googlecode.androidannotations.annotations.EActivity;
-import com.googlecode.androidannotations.annotations.SystemService;
 import com.googlecode.androidannotations.annotations.ViewById;
 import com.icechen1.notable.library.NotificationService_;
 
@@ -157,16 +143,10 @@ public class MainActivity
 		//Log.i(TAG, item.getLongText());
     	final EditText editText = (EditText) findViewById(R.id.entryText);
     	String newLine = System.getProperty("line.separator");
-       	String longText = "Notable"; 
        	
-       	String text = item.getTitle();
-       	String text_long = null;
-       	if (!item.getLongText().equals("Notable")){
-       		text_long = item.getLongText();
-       	}
-       	String final_text;
-       	if (text_long != null)  {final_text = text + newLine + text_long;}
-       	else {final_text = text;}
+       	String final_text = item.getTitle();
+		if (!item.getLongText().equals(""))
+			final_text += newLine + item.getLongText();
        	
     	editText.setText(final_text);
 		
@@ -199,34 +179,24 @@ public class MainActivity
         
     	EditText editText = (EditText) findViewById(R.id.entryText);
 
-    	String[] input = editText.getText().toString().split("\n");
-    	Log.d(TAG,input[0]);
+    	String inputText = editText.getText().toString();
+    	int lineBreakPos = inputText.indexOf('\n');
+    	String firstLine = inputText.substring(0, lineBreakPos);
+    	Log.d(TAG, firstLine);
     	
-    	String longText = "Notable";  
-    	if (share_info != null){
+    	String longText;
+    	if (share_info != null)
     		longText = share_info;
-    	}
-    	String newLine = System.getProperty("line.separator");
-    	//Build longText
-    	int i = 0;
-    	for (String s:input){
-    		if(i == 0){
-    			i++;
-    		}else{
-    			if (i == 1){
-    				longText = s + newLine;
-    			}else{
-    				longText = longText + s + newLine;
-    			}
-    			i++;
-    		}
-    	}
+    	else if (lineBreakPos != -1)
+    		longText = inputText.substring(lineBreakPos + 1);
+    	else
+    		longText = "";
 
         Intent Intent = new Intent(this, NotificationService_.class);
         Bundle mBundle = new Bundle();
        // Bundle extras = Intent.getExtras();
         mBundle.putString("action", "add");
-        mBundle.putString("title", input[0]);
+        mBundle.putString("title", firstLine);
         mBundle.putString("icon", icon);
         mBundle.putString("longtext", longText);
         
