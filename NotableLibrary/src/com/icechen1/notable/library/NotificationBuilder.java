@@ -12,7 +12,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -102,33 +101,26 @@ public class NotificationBuilder {
 	    System.out.println("Building time: " + item.getTime());
 	    System.out.println("Building icon: " + item.getIcon());
 		
-		Bitmap icon = BitmapFactory.decodeResource(cxt.getResources(), R.drawable.ic_checkmark_gray);
 		int smallicon = R.drawable.ic_stat_status_icon;
-		if(item.getIcon().equals("checkmark_gray"))
-		{
-			icon = BitmapFactory.decodeResource(cxt.getResources(), R.drawable.ic_checkmark_gray);
-		}
-		if(item.getIcon().equals("checkmark_orange"))
-		{
-			icon = BitmapFactory.decodeResource(cxt.getResources(), R.drawable.ic_checkmark_orange);
-		}
-		if(item.getIcon().equals("checkmark_red"))
-		{
-			icon = BitmapFactory.decodeResource(cxt.getResources(), R.drawable.ic_checkmark_red);
-		}
-		if(item.getIcon().equals("checkmark_green"))
-		{
-			icon = BitmapFactory.decodeResource(cxt.getResources(), R.drawable.ic_checkmark_green);
-		}
+		int iconId = R.drawable.ic_checkmark_gray;
+		if (item.getIcon().equals("checkmark_gray")) {
+			// Do nothing
+		} else if (item.getIcon().equals("checkmark_orange"))
+			iconId = R.drawable.ic_checkmark_orange;
+		else if (item.getIcon().equals("checkmark_red"))
+			iconId = R.drawable.ic_checkmark_red;
+		else if (item.getIcon().equals("checkmark_green"))
+			iconId = R.drawable.ic_checkmark_green;
+		Bitmap icon = BitmapFactory.decodeResource(cxt.getResources(), iconId);
 		
     	String[] input = item.getLongText().toString().split("\n");
-    	String secondLine;
+    	String secondLine, tickerText = item.getTitle();
     	if (input.length < 2 && input[0].length() < 20){
     		secondLine = "";
     	}else{
     		secondLine = input[0];
+			tickerText += " : " + secondLine;
     	}
-    	
     	
     	Integer pref = Integer.parseInt(PreferenceManager.getDefaultSharedPreferences(cxt).getString("onClickAction", "2"));
 		//CREATE THE INTENT TO LAUNCH EDIT
@@ -166,39 +158,25 @@ public class NotificationBuilder {
 		}
 
 		// Build notification
-		Notification noti;
+		NotificationCompat.Builder builder = new NotificationCompat.Builder(cxt)
+				.setContentTitle(item.getTitle())
+				.setContentText(secondLine)
+				.setSmallIcon(smallicon)
+				.setContentIntent(pIntent)
+				.setStyle(new NotificationCompat.BigTextStyle().bigText(item.getLongText())) 
+				.setTicker(tickerText)
+				.setPriority(Notification.PRIORITY_HIGH)
+				.setWhen(item.getTime())
+				.setDeleteIntent(spIntent)
+				.setLargeIcon(icon);
 		if (PreferenceManager.getDefaultSharedPreferences(cxt).getBoolean("expand_buttons", true)){
-			noti = new NotificationCompat.Builder(cxt)
-			.setContentTitle(item.getTitle())
-			.setContentText(secondLine)
-			.setSmallIcon(smallicon)
-			.setContentIntent(pIntent)
-			.addAction(R.drawable.ic_action_ic_edit, cxt.getResources().getString(R.string.edit), jIntent)
-			.addAction(R.drawable.ic_action_ic_done, cxt.getResources().getString(R.string.done), spIntent)
-			.setStyle(new NotificationCompat.BigTextStyle().bigText(item.getLongText())) 
-			.setTicker(secondLine.isEmpty() ? item.getTitle() : item.getTitle() + " : " + secondLine)
-			.setPriority(Notification.PRIORITY_HIGH)
-			// setUsesChronometer option which subindication to display
-			.setWhen(item.getTime())
-			.setDeleteIntent(spIntent)
-			// setOngoing
-			// setNumber
-			.setLargeIcon(icon)
-			.build();
-		}else{
-			noti = new NotificationCompat.Builder(cxt)
-			.setContentTitle(item.getTitle())
-			.setContentText(secondLine)
-			.setSmallIcon(smallicon)
-			.setContentIntent(pIntent)
-			.setStyle(new NotificationCompat.BigTextStyle().bigText(item.getLongText())) 
-			.setTicker(item.getTitle() + " : " + secondLine)
-			.setPriority(Notification.PRIORITY_HIGH)
-			.setWhen(item.getTime())
-			.setDeleteIntent(spIntent)
-			.setLargeIcon(icon)
-			.build();
+			builder.addAction(R.drawable.ic_action_ic_edit, cxt.getResources().getString(R.string.edit), jIntent)
+					.addAction(R.drawable.ic_action_ic_done, cxt.getResources().getString(R.string.done), spIntent);
+					// setUsesChronometer option which subindication to display
+					// setOngoing
+					// setNumber
 		}
+		Notification noti = builder.build();
 		noti.deleteIntent = spIntent;
 		
 		if(PreferenceManager.getDefaultSharedPreferences(cxt).getBoolean("low_prio", false)){
