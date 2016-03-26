@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary_text_holo_dark">#FFFFFF</color>
+    <color name="primary_text_holo_light">#000000</color>
+    <color name="gray">#696969</color>
+    <color name="gray_light">#ff8e8e8e</color>
+    <color name="gray_highlight">#308e8e8e</color>
+    <color name="gray_very_light">#e0e0e0</color>
+    <color name="selected_light">#e0e0e0</color>
+    <color name="selected_dark">#757575</color>
+    <color name="holo_blue">#0099CC</color>
+    <color name="holo_blue_dark">#0086b3</color>
+    <color name="separator_light">#ffeaeaea</color>
+    <color name="separator_dark">#616161</color>
+</resources>

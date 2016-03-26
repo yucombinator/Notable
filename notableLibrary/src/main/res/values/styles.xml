@@ -1,0 +1,124 @@
+<resources>
+
+    <style name="AppTheme" parent="AppThemeBase">
+        <item name="checkmark_selector">@drawable/checkmark_selector</item>
+    </style>
+
+    <style name="AppThemeDark" parent="AppThemeDarkBase">
+        <item name="checkmark_selector">@drawable/checkmark_selector</item>
+    </style>
+
+    <style name="AppThemeBase" parent="Theme.AppCompat.Light">
+        <item name="colorPrimary">@color/holo_blue</item>
+        <item name="colorPrimaryDark">@color/holo_blue_dark</item>
+        <item name="colorControlNormal">#fff</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <!-- Icons -->
+        <item name="ic_send_disabled">@drawable/ic_send_disabled_holo_light</item>
+        <item name="ic_send">@drawable/ic_send_holo_light</item>
+        <item name="ic_action_back">@drawable/ic_action_back</item>
+        <item name="ic_action_done">@drawable/ic_action_done</item>
+        <item name="ic_action_edit">@drawable/ic_action_image_edit_light</item>
+        <item name="ic_menu_moreoverflow">@drawable/ic_menu_moreoverflow_normal_holo_light</item>
+        <item name="ic_action_alerts_and_states_add_alarm">
+            @drawable/ic_action_action_alarm_add_light
+        </item>
+        <item name="ic_action_navigation_cancel">@drawable/ic_action_navigation_cancel_light</item>
+        <item name="ic_action_device_access_alarms">@drawable/ic_action_device_access_alarms_light
+        </item>
+        <item name="ic_mic">@drawable/ic_action_av_mic_light</item>
+        <item name="ic_date">@drawable/ic_action_action_query_builder</item>
+        <item name="separator">@color/separator_light</item>
+        <item name="selected">@color/selected_light</item>
+    </style>
+
+    <style name="AppThemeDarkBase" parent="Theme.AppCompat">
+        <item name="colorPrimary">@color/holo_blue</item>
+        <item name="colorPrimaryDark">@color/holo_blue_dark</item>
+        <item name="colorControlNormal">#fff</item>
+        <item name="checkmark_selector">@drawable/checkmark_selector</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <!-- Icons -->
+        <item name="ic_send_disabled">@drawable/ic_send_disabled_holo_dark</item>
+        <item name="ic_send">@drawable/ic_send_holo_dark</item>
+        <item name="ic_action_back">@drawable/ic_action_back_dark</item>
+        <item name="ic_action_done">@drawable/ic_action_done_dark</item>
+        <item name="ic_action_edit">@drawable/ic_action_image_edit_dark</item>
+        <item name="ic_menu_moreoverflow">@drawable/ic_menu_moreoverflow_normal_holo_dark</item>
+        <item name="ic_action_alerts_and_states_add_alarm">
+            @drawable/ic_action_action_alarm_add_dark
+        </item>
+        <item name="ic_action_navigation_cancel">@drawable/ic_action_navigation_cancel_dark</item>
+        <item name="ic_action_device_access_alarms">@drawable/ic_action_device_access_alarms_dark
+        </item>
+        <item name="ic_mic">@drawable/ic_action_av_mic_dark</item>
+        <item name="ic_date">@drawable/ic_action_action_query_builder_dark</item>
+        <item name="separator">@color/separator_dark</item>
+        <item name="selected">@color/selected_dark</item>
+    </style>
+
+    <style name="TransDarkAppTheme" parent="AppThemeDark">
+        <item name="android:textColor">#696969</item>
+        <item name="colorHint">@color/gray_light</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowBackground">@drawable/dialog_full_holo_dark</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowActionModeOverlay">true</item>
+        <item name="android:windowCloseOnTouchOutside">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimAmount">0.4</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:textColorPrimary">@color/primary_text_holo_dark</item>
+        <item name="android:textColorPrimaryInverse">@color/primary_text_holo_light</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="TransAppTheme" parent="AppTheme">
+        <item name="colorHint">@color/gray</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:textColorPrimary">@color/primary_text_holo_light</item>
+        <item name="android:textColorPrimaryInverse">@color/primary_text_holo_dark</item>
+        <item name="android:windowBackground">@drawable/dialog_full_holo_light</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowActionModeOverlay">true</item>
+        <item name="android:windowCloseOnTouchOutside">true</item>
+        <item name="android:backgroundDimAmount">0.6</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="Title">
+        <item name="android:textSize">28sp</item>
+        <item name="android:textColor">#33B5E5</item>
+        <item name="android:fontFamily">sans-serif-thin</item>
+    </style>
+
+    <declare-styleable name="icons">
+        <attr name="icon_menu" format="reference" />
+        <attr name="icon_send" format="reference" />
+        <attr name="icon_confirm" format="reference" />
+        <attr name="icon_edit" format="reference" />
+        <attr name="icon_close" format="reference" />
+    </declare-styleable>
+
+    <style name="TransAppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="TransAppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="TransAppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+</resources>

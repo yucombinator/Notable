@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="AppThemeBase">
+        <item name="checkmark_selector">@drawable/checkmark_ripple</item>
+
+    </style>
+    <style name="AppThemeDark" parent="AppThemeDarkBase">
+        <item name="checkmark_selector">@drawable/checkmark_ripple</item>
+    </style>
+
+    <style name="TransAppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+</resources>

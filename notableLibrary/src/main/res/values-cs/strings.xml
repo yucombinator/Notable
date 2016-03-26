@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<string name="app_name">Notable</string>
+	<string name="menu_settings">Nastavení</string>
+	<string name="hint2">Přidat připomínku...</string>
+	<string name="more_apps">Další aplikace</string>
+	<string name="general">Obecné</string>
+	<string name="create_shortcut">Vytvoří zástupce mezi notifikacemi</string>
+	<string name="toggle_shortcut">Zapnout zástupce</string>
+	<string name="swiping_allow">Povolit přejetí</string>
+	<string name="swiping_desc">Umožňuje použít přejetí připomínky v notifikacích k její označení za hotovou</string>
+	<string name="donate">Podpořit</string>
+	<string name="show_detail">Zobrazit detaily</string>
+	<string name="display_confirm">Zobrazit detailní náhled při kliknutí na notifikaci.</string>
+
+    <string name="extension_title">Notable</string>
+    <string name="extension_description">Zobrazí vaše současné připomínky.</string>
+    <string name="settings">Nastavení</string>
+    <string name="add">Přidat</string> 
+    <string name="edit">Upravit</string> 
+    <string name="done">Hotovo</string> 
+    <string name="onclick_text">Nastavit akci při kliknutí</string> 
+    <string name="onclick_description">Co dělat při kliknutí na notifikaci.</string> 
+    <string name="choose">Vyberte z možností</string> 
+    <string name="add_long">Přidat připomínku</string> 
+    <string name="dismiss_reminder">Smazat připomínku</string> 
+    <string name="hide_expandable_options">Zobrazit tlačítka možností</string> 
+    <string name="hide_expadable_description">(Android 4.1+) Ukáže tlačítka v aktivní notifikaci</string>
+</resources>

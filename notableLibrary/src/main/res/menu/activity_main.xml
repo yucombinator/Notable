@@ -1,0 +1,16 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/menu_history"
+        android:title="@string/menu_history"
+        android:icon="@drawable/ic_action_action_history"
+        android:orderInCategory="1"
+        app:showAsAction="ifRoom"
+        />
+    <item android:id="@+id/menu_settings"
+        android:title="@string/menu_settings"
+        android:orderInCategory="100"
+        app:showAsAction="never"
+        />
+    <item android:id="@+id/more_apps" android:title="@string/more_apps" android:visible="false"></item>
+    <item android:id="@+id/donate" android:title="@string/donate" android:visible="false"></item>
+</menu>

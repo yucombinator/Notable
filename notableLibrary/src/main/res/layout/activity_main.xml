@@ -1,0 +1,221 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginBottom="15dp">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:minHeight="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="2dp"/>
+
+    <LinearLayout
+        android:id="@+id/checkmarks"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/toolbar"
+        android:paddingLeft="15dp" 
+        android:paddingRight="15dp"
+        android:layout_marginTop="15dp"
+        >
+
+        <ImageButton
+            android:id="@+id/checkmark_gray"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:background="?attr/checkmark_selector"
+            android:src="@drawable/ic_checkmark_gray" />
+
+        <ImageButton
+            android:id="@+id/checkmark_green"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingTop="10dp" 
+            android:paddingBottom="10dp" 
+            android:background="?attr/checkmark_selector"
+            android:src="@drawable/ic_checkmark_green" />
+
+        <ImageButton
+            android:id="@+id/checkmark_orange"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingTop="10dp" 
+            android:paddingBottom="10dp" 
+            android:background="?attr/checkmark_selector"
+            android:src="@drawable/ic_checkmark_orange" />
+
+        <ImageButton
+            android:id="@+id/checkmark_red"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingTop="10dp" 
+            android:paddingBottom="10dp" 
+            android:background="?attr/checkmark_selector"
+            android:src="@drawable/ic_checkmark_red" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line"
+        android:layout_below="@+id/checkmarks"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#4c909090"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="5dp"
+        />
+
+    <LinearLayout
+        android:id="@+id/timersettings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/line"
+        android:gravity="bottom"
+        android:paddingLeft="15dp"
+        android:paddingTop="5dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="5dp"
+        android:animateLayoutChanges="true">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/reminder_none"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/no_alarm"
+                android:id="@+id/textView2"
+                android:fontFamily="sans-serif-light"
+                android:layout_centerInParent="true"/>
+
+            <ImageButton
+                android:id="@+id/reminderAddBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?selectableItemBackground"
+                android:clickable="false"
+                android:enabled="false"
+                android:src="?attr/ic_action_alerts_and_states_add_alarm"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/reminder_set"
+            android:layout_weight="1"
+            android:visibility="gone"
+            android:animateLayoutChanges="true">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/date"
+                android:id="@+id/dateBtn"
+                style="?android:attr/spinnerStyle" />
+
+            <Button
+                style="?android:attr/spinnerStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/time"
+                android:id="@+id/TimeBtn"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/dateBtn"
+                android:layout_marginLeft="15dp"/>
+
+            <ImageButton
+                android:id="@+id/cancelAlarmSet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?selectableItemBackground"
+                android:clickable="false"
+                android:enabled="false"
+                android:src="?attr/ic_action_navigation_cancel"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line2"
+        android:layout_below="@+id/timersettings"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#4c909090"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        />
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:layout_below="@+id/line2"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="15dp">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+           <!-- style="@style/BoxStyle"  -->    
+            <EditText
+				android:padding="7dp"
+                android:id="@+id/entryText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapSentences|textMultiLine"
+                android:fontFamily="sans-serif-light"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColorHint="?attr/colorHint"
+                android:hint="@string/hint2" />
+
+            <ImageButton
+                android:id="@+id/voiceBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:background="?selectableItemBackground"
+                android:onClick="startVoiceRecognition"
+                android:src="?attr/ic_mic" />
+        </RelativeLayout>
+
+        <ImageButton
+            android:id="@+id/addBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="?selectableItemBackground"
+            android:clickable="false"
+            android:enabled="false"
+            android:onClick="addBtn"
+            android:src="?attr/ic_send_disabled" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

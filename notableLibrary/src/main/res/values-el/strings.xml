@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+<string name="app_name">Σημειωτέον</string>
+<string name="menu_settings">Ρυθμίσεις</string>
+<string name="hint2">Πρόσθεση νέας υπενθύμισης...</string>
+<string name="more_apps">Περισσότερες εφαρμογές</string>
+<string name="general">Γενικά</string>
+<string name="create_shortcut">Δημιουργία συντόμευσης στη μπάρα ειδοποιήσεων</string>
+<string name="toggle_shortcut">Εμφάνιση συντόμευσης</string>
+<string name="swiping_allow">Να επιτρέπεται σύρσιμο</string>
+<string name="swiping_desc">Χρήση χειρονομίας συρσίματος για να μαρκαριστεί μια ειδοποίηση ως ολοκληρωμένη</string>
+<string name="donate">Δωρεά</string>
+<string name="show_detail">Εμφάνιση λεπτομερειών</string>
+<string name="display_confirm">Εμφάνιση λεπτομερειών όταν κλικάρω μια ειδοποίηση.</string>
+
+<string name="extension_title">Σημειωτέον</string>
+<string name="extension_description">Εμφάνιση τρεχόντων ειδοποιήσεων.</string>
+<string name="settings">Ρυθμίσεις</string>
+<string name="add">Πρόσθεση</string> 
+<string name="edit">Επεξεργασία</string> 
+<string name="done">Ολοκλήρωση</string> 
+<string name="onclick_text">Δυνατότητες κλικαρίσματος ειδοποίησης</string> 
+<string name="onclick_description">Επιλογές δυνατοτήτων ειδοποίησης όταν κλικάρω σε αυτή.</string> 
+<string name="choose">Διάλεξε μια επιλογή</string> 
+<string name="add_long">Πρόσθεση υπενθύμισης</string> 
+<string name="dismiss_reminder">Αφαίρεση υπενθύμισης</string> 
+<string name="hide_expandable_options">Προβολή πλήκτρων επέκτασης</string> 
+<string name="hide_expadable_description">(Android 4.1+)Προβολή δράσεων όταν μια ειδοποίηση είναι σε επέκταση</string>
+</resources>

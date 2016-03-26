@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+    <PreferenceCategory android:title="@string/general" >
+        <ListPreference
+            android:defaultValue="2"
+            android:dialogTitle="@string/choose"
+            android:entries="@array/onclick_action"
+            android:entryValues="@array/onclick_action_values"
+            android:key="onClickAction"
+            android:summary="@string/onclick_description"
+            android:title="@string/onclick_text" />
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:enabled="true"
+            android:key="shortcut"
+            android:summary="@string/create_shortcut"
+            android:title="@string/toggle_shortcut" />
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:enabled="true"
+            android:key="enable_history"
+            android:summary="@string/enable_history_summary"
+            android:title="@string/enable_history" />
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="expand_buttons"
+            android:summary="@string/hide_expadable_description"
+            android:title="@string/hide_expandable_options" />
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="swipe"
+            android:summary="@string/swiping_desc"
+            android:title="@string/swiping_allow" />
+        
+        <ListPreference android:summary="@string/priority_info"
+            android:title="@string/priority"
+            android:key="priority"
+            android:entries="@array/priority_choice"
+            android:entryValues="@array/priority_values"
+            android:defaultValue="normal"/>
+
+        <RingtonePreference
+            android:summary="@string/donate_only"
+            android:key="notification_sound"
+            android:ringtoneType="notification"
+            android:title="@string/ringtone_info"
+            android:showDefault="true"
+            android:showSilent="true"
+            android:enabled="false"/>
+
+</PreferenceCategory>
+    <PreferenceCategory android:title="@string/theme">
+        <SwitchPreference
+            android:enabled="false"
+            android:key="dark_theme"
+            android:summary="@string/donate_only"
+            android:title="@string/DarkTheme" />
+    </PreferenceCategory>
+</PreferenceScreen>

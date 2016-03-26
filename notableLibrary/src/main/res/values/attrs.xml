@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="ic_send_disabled" format="reference"/>
+    <attr name="ic_send" format="reference"/>
+    <attr name="ic_action_back" format="reference"/>
+    <attr name="ic_action_done" format="reference"/>
+    <attr name="ic_action_edit" format="reference"/>
+    <attr name="ic_menu_moreoverflow" format="reference"/>
+    <attr name="ic_action_alerts_and_states_add_alarm" format="reference"/>
+    <attr name="ic_action_navigation_cancel" format="reference"/>
+    <attr name="ic_action_device_access_alarms" format="reference"/>
+    <attr name="ic_mic" format="reference"/>
+    <attr name="ic_date" format="reference"/>
+
+    <attr name="checkmark_selector" format="reference"/>
+    <attr name="colorHint" format="reference"/>
+    <attr name="separator" format="reference"/>
+    <attr name="selected" format="reference"/>
+</resources>

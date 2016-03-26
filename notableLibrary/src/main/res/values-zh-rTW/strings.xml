@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<string name="app_name">Notable</string>
+<string name="menu_settings">設定</string>
+<string name="hint2">建立提醒事項</string>
+<string name="more_apps">其它應用</string>
+<string name="general">一般</string>
+<string name="create_shortcut">建立通知列捷徑</string>
+<string name="toggle_shortcut">捷徑開關</string>
+<string name="swiping_allow">准許滑動</string>
+<string name="swiping_desc">把提醒事項移出通知列以示完成</string>
+<string name="donate">捐款</string>
+<string name="show_detail">顯示詳細資訊</string>
+<string name="display_confirm">點一下提醒事項通知來檢視詳細資訊</string>
+
+    <string name="extension_title">Notable</string>
+    <string name="extension_description">這個外挂程式可以顯示沒有完成的提醒事項</string>
+    <string name="settings">設定</string>
+    <string name="add">加入</string> 
+    <string name="edit">修改</string> 
+    <string name="done">完成</string> 
+    <string name="onclick_text">通知的點一下動作</string> 
+    <string name="onclick_description">自訂點一下提醒事項通知將執行什麽動作</string> 
+    <string name="choose">動作列表</string> 
+    <string name="add_long">建立新提醒事項</string> 
+    <string name="dismiss_reminder">忽略提醒</string> 
+    <string name="hide_expandable_options">通知的展開動作</string> 
+    <string name="hide_expadable_description">[只工作於 Android 4.1+] 展開提醒事項通知將顯示可用動作</string>
+</resources>

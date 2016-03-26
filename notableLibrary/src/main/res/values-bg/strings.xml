@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Notable</string>
+	<string name="menu_settings">Настройки</string>
+	<string name="hint2">Добавете напомняне...</string>
+	<string name="more_apps">Още приложения</string>
+	<string name="general">Общи</string>
+	<string name="create_shortcut">Създаване на пряк път в лентата за известия</string>
+	<string name="toggle_shortcut">Пряк път</string>
+	<string name="swiping_allow">Премахване с плъзване</string>
+	<string name="swiping_desc">Прекарване на пръст за маркиране на известието като готово</string>
+	<string name="donate">Дарение</string>
+	<string name="show_detail">Екран с подробности</string>
+	<string name="display_confirm">Показване на екран с подробности при докосване на известието.</string>
+
+    <string name="extension_title">Notable разширение за DashClock</string>
+    <string name="extension_description">Показва текущите ви напомняния.</string>
+    <string name="settings">Настройки</string>
+    <string name="add">Добави</string> 
+    <string name="add_long">Добави напомняне</string> 
+    <string name="edit">Редактиране</string> 
+    <string name="done">Готово</string>
+    <string name="dismiss_reminder">Отхвърляне на напомнянето</string>
+    
+    <string name="onclick_text">Действие при докосване</string> 
+    <string name="onclick_description">Какво да се направи при докосване на известието.</string> 
+    <string name="choose">Изберете опция</string>
+</resources>

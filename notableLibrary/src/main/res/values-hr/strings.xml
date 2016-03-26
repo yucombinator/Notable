@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<string name="app_name">Notable</string>
+<string name="menu_settings">Postavke</string>
+<string name="hint2">Dodaj podsjetnik...</string>
+<string name="more_apps">Više aplikacija ovog programera</string>
+<string name="general">Postavke</string>
+<string name="create_shortcut">Dodaj prečac u notifikacijski izbornik</string>
+<string name="toggle_shortcut">Omogući prečac</string>
+<string name="swiping_allow">Omogući swipe obavjesti</string>
+<string name="swiping_desc">Koristi swipe opciju za označavanje obavjesti kao obavljenu</string>
+<string name="donate">Donate</string>
+<string name="show_detail">Prikaži detalje</string>
+<string name="display_confirm">Prikaži detalje pritiskom na obavijest.</string>
+
+<string name="extension_title">Notable</string>
+<string name="extension_description">Prikazuje Vaše trenutne podsjetnike.</string>
+<string name="settings">Postavke</string>
+<string name="add">Dodaj</string> 
+<string name="edit">Uredi</string> 
+<string name="done">Obavljeno</string> 
+<string name="onclick_text">Pritskom na obavijest</string> 
+<string name="onclick_description">Što učiniti pritiskom obavjesti.</string> 
+<string name="choose">Odaberite opciju</string> 
+<string name="add_long">Dodaj podsjetnik</string> 
+<string name="dismiss_reminder">Odbaci obavijest</string> 
+<string name="hide_expandable_options">Prikaži proširivu obavijest</string> 
+<string name="hide_expadable_description">(Android 4.1+) Prikaži mogučnosti kada je obavijest proširena</string>
+</resources>

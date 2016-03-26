@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Notable</string>
+<string name="menu_settings">Impostazioni</string>
+<string name="hint2">Aggiungi un nuovo promemoria...</string>
+<string name="more_apps">Altre applicazioni</string>
+<string name="general">Generali</string>
+<string name="create_shortcut">Crea un collegamento nella barra di stato</string>
+<string name="toggle_shortcut">Attiva collegamento</string>
+<string name="swiping_allow">Consenti swipe</string>
+<string name="swiping_desc">Usa i gesti swipe per contrassegnare un\'attività come completata</string>
+<string name="donate">Dona</string>
+<string name="show_detail">Mostra dettagli</string>
+<string name="display_confirm">Mostra una schermata con i dettagli quando si fa clic su una notifica</string>
+
+    <string name="extension_title">Estensione Notable per DashClock</string>
+    <string name="extension_description">Mostra i propri promemoria.</string>
+    <string name="settings">Impostazioni</string>
+    <string name="add">Aggiungi</string> 
+    <string name="edit">Modifica</string> 
+    <string name="done">Fatto</string> 
+    <string name="onclick_text">Azione al clic sulla notifica</string> 
+    <string name="onclick_description">Cosa fare quando si fa clic su una notifica.</string> 
+    <string name="choose">Scegliere un\'opzione</string> 
+    <string name="add_long">Aggiungi un promemoria</string> 
+    <string name="dismiss_reminder">Rimuovi promemoria</string>
+</resources>

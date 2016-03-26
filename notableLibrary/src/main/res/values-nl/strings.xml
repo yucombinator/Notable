@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<string name="app_name">Notable</string>
+<string name="menu_settings">Instellingen</string>
+<string name="hint2">Herinnering toevoegen...</string>
+<string name="more_apps">Meer apps</string>
+<string name="general">Algemeen</string>
+<string name="create_shortcut">Maak een snelkoppeling in de notificatiebalk</string>
+<string name="toggle_shortcut">Snelkoppeling aan</string>
+<string name="swiping_allow">Vegen</string>
+<string name="swiping_desc">Gebruik een veegbeweging om een notificatie als voltooid te markeren</string>
+<string name="donate">Doneer</string>
+<string name="show_detail">Toon detail scherm</string>
+<string name="display_confirm">Toon een detail scherm na het klikken op een notificatie</string>
+<string name="extension_title">Notable</string>   <!-- Please read Note1 at the bottom -->
+<string name="extension_description">Toont je huidige herinneringen.</string>
+<string name="settings">Instellingen</string>
+<string name="add">Toevoegen</string> 
+<string name="edit">Bewerk</string> 
+<string name="done">Klaar</string> 
+<string name="onclick_text">Klikken op een notificatie</string>
+<string name="onclick_description">Wat te doen bij het klikken op een notificatie</string> <!-- Please read Note2 at the bottom -->
+<string name="choose">Kies een optie</string> 
+<string name="add_long">Voeg een herinnering toe</string> 
+<string name="dismiss_reminder">Verwijder herinnering</string> 
+<string name="hide_expandable_options">Toon uitklapbare knoppen</string>
+<string name="hide_expadable_description">(Android 4.1+) Toon opties wanneer een notificatie is uitgeklapt</string>
+
+<!--
+Note1: I would change this to just -Notable reminders- or -Notable-. All extensions I use in DashClock just show their app name with a small addition like WhatsApp messages, Calender appointment, Wheater, Battery, etc.
+English description should be: <string name="extension_title">Displays your current reminders.</string>  All other descriptions start with -Displays- instead of -Shows-.
+Dutch translation would still be: <string name="extension_title">Toont je huidige herinneringen.</string>
+
+Note2: I ommitted the . at the end of the sentence because all the other descriptions do not end with a .
+
+Note3: I omitted the translation of -new- to reduce the number of characters needed.
+This is the exact translation if you think it would fit: <string name="hint2">Nieuwe herinnering toevoegen...</string>
+The short version without -new- is as intuitive as with it. The word -toevoegen- already implies we're adding a new one. So it's no problem if you use the short version.
+-->
+
+</resources>
