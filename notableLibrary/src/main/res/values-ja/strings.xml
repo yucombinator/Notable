@@ -1,0 +1,65 @@
+<resources>
+
+    <string name="app_name">Notable</string>
+    <string name="menu_settings">設定</string>
+    <string name="hint2">新しいリマインダーを追加...</string>
+    <string name="more_apps">さらにアプリを表示</string>
+    <string name="general">全般</string>
+    <string name="create_shortcut">通知バーにショートカットを作成</string>
+    <string name="toggle_shortcut">ショートカットの切り替え</string>
+    <string name="swiping_allow">スワイプを許可する</string>
+    <string name="swiping_desc">スワイプのジェスチャーを使用して通知を完了としてマークします</string>
+    <string name="donate">寄付する</string>
+    <string name="show_detail">詳細画面を表示</string>
+    <string name="display_confirm">通知をクリックした時に詳細画面を表示します。</string>
+
+    <string name="extension_title">Notable</string>
+    <string name="extension_description">現在のリマインダーを表示します。</string>
+    <string name="settings">設定</string>
+    <string name="add">追加</string>
+    <string name="edit">編集</string>
+    <string name="done">完了</string>
+    <string name="onclick_text">クリック操作時の通知</string>
+    <string name="onclick_description">通知をクリックした時に実行すること。</string>
+    <string name="choose">オプションの選択</string>
+    <string name="add_long">リマインダーを追加</string>
+    <string name="dismiss_reminder">リマインダーを消去</string>
+    <string name="hide_expandable_options">展開可能なボタンを表示</string>
+    <string name="hide_expadable_description">(Android 4.1+) 通知を展開した時に操作を表示します。</string>
+    <string name="low_prio">低い優先度</string>
+    <string name="low_prio_info">(Andrid 4.1+) 通知画面の最後に通知を表示します。</string>
+
+    <string name="priority">優先度</string> 
+    <string name="priority_info">(Andrid 4.1+)\n 通常: 通知画面の先頭に通知が表示されます。\n
+        低: 通知画面で、デフォルトの通知の下に Notable の通知が表示されます。\n
+        最低: 通知画面の最後に通知が表示され、ステータスバーにアイコンが隠れます。</string>
+
+    <string name="DarkTheme">ダークテーマ</string>
+    <string name="donate_only">Notable Plus のみ</string>
+    <string-array name="priority_choice">
+        <item>通常の優先度</item>
+        <item>低い優先度</item>
+        <item>最低の優先度 (ステータスバーに矢印を隠す)</item>
+    </string-array>
+    <string-array name="priority_values"> <!-- Do not translate! -->
+        <item>normal</item>
+        <item>low</item>
+        <item>min</item>
+    </string-array>
+    <string name="theme">テーマ</string>
+    <string name="no_alarm">アラームはセットされていません</string>
+    <string name="date">日付</string>
+    <string name="time">時刻</string>
+    <string name="alarm">アラーム</string>
+    <string name="ringtone_info">リマインダーのサウンド</string>
+    <string name="title_activity_history">履歴アクティビティ</string>
+    <string name="action_settings">設定</string>
+    <string name="section_format">セクション %1$d からようこそ</string>
+    <string name="menu_history">履歴</string>
+    <string name="not_set">セットされていません</string>
+    <string name="no_history">まだリマインダーは作成されていません。</string>
+    <string name="deleted_item">削除しました</string>
+    <string name="undo">元に戻す</string>
+    <string name="enable_history">履歴を有効にする</string>
+    <string name="enable_history_summary">履歴に消去した通知を保存します</string>
+</resources>
