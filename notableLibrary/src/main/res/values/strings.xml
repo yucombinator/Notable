@@ -9,7 +9,7 @@
     <string name="toggle_shortcut">Toggle shortcut</string>
     <string name="swiping_allow">Allow swiping</string>
     <string name="swiping_desc">Use the swiping gesture to mark a notification as done</string>
-    <string name="donate">Donate</string>
+    <string name="donate">Upgrade to Plus</string>
     <string name="show_detail">Show detail screen</string>
     <string name="display_confirm">Display a detail screen when clicking on a notification.</string>
 
@@ -62,4 +62,6 @@
     <string name="undo">Undo</string>
     <string name="enable_history">Enable History</string>
     <string name="enable_history_summary">Save dismissed notifications in history</string>
+    <string name="menu_share">Recommend app</string>
+    <string name="share_message">Hey, check out Notable - quick reminder app: https://play.google.com/store/apps/details?id=com.icechen1.notable</string>
 </resources>

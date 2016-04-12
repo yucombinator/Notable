@@ -85,9 +85,9 @@ public class MainActivity
 	public void onResume(){
 		super.onResume();
         Intent Intent = new Intent(this, com.icechen1.notable.library.NotificationService_.class);
-        Bundle mBundle = new Bundle();
-        mBundle.putString("action", "boot");
-        Intent.putExtras(mBundle);
+        Bundle bundle = new Bundle();
+        bundle.putString("action", "boot");
+        Intent.putExtras(bundle);
         startService(Intent);
 
 		MenuItem historyItem = mToolbar.getMenu().findItem(R.id.menu_history);
@@ -112,9 +112,9 @@ public class MainActivity
 		Bundle saved = getIntent().getExtras();		
 		
 		//EDIT NOTIF
-		try{
-		saved_id = saved.getInt("id",-1);
-		}catch(Exception e){
+		try {
+			saved_id = saved.getInt("id",-1);
+		} catch(Exception e){
 			saved_id = -1;
 		}
 
@@ -185,20 +185,16 @@ public class MainActivity
   		resetBkg();
   		icon = item.getIcon();
   		
-		if(icon.equals("checkmark_gray"))
-		{
+		if(icon.equals("checkmark_gray")) {
 	  		checkmark_gray.setSelected(true);
 		}
-		if(icon.equals("checkmark_orange"))
-		{
+		if(icon.equals("checkmark_orange")) {
 			checkmark_orange.setSelected(true);
 		}
-		if(icon.equals("checkmark_red"))
-		{
+		if(icon.equals("checkmark_red")) {
 			checkmark_red.setSelected(true);
 		}
-		if(icon.equals("checkmark_green"))
-		{
+		if(icon.equals("checkmark_green")) {
 			checkmark_green.setSelected(true);
 		}
 
@@ -391,6 +387,13 @@ public class MainActivity
 			Intent gohist = new Intent(this, HistoryActivity.class);
 			startActivity(gohist);
 			return true;
+		} else if (itemId == R.id.menu_share) {
+			Intent sendIntent = new Intent();
+			sendIntent.setAction(Intent.ACTION_SEND);
+			sendIntent.putExtra(Intent.EXTRA_TEXT, getString(R.string.share_message));
+			sendIntent.setType("text/plain");
+			startActivity(sendIntent);
+			return true;
 		} else {
 			return super.onOptionsItemSelected(item);
 		}
@@ -472,7 +475,7 @@ public class MainActivity
         useAlarm = false;
     }
 
-  @Click
+  	@Click
     void checkmark_gray(){
         resetBkg();
 	  	checkmark_gray.setSelected(true);
