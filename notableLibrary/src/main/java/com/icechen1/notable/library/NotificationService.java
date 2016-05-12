@@ -147,7 +147,7 @@ public class NotificationService extends Service{
 
         Bundle jBundle = new Bundle();
         jBundle.putString("action", "alarm");
-        jBundle.putInt("id", notif._id);
+        jBundle.putInt("id", notif.id);
         intent.putExtras(jBundle);
 
         PendingIntent pendingIntent =
@@ -165,7 +165,7 @@ public class NotificationService extends Service{
         }
 
         Log.d("Notable", "Created alarm at: " + notif.getReminderTime());
-		Log.d("Notable", "with id: " + notif._id);
+		Log.d("Notable", "with id: " + notif.id);
 	} 
 
 	private void finish() {
