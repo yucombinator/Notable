@@ -3,36 +3,36 @@ package com.icechen1.notable.library.utils;
 public class NotificationItem {
  
     //private variables
-    public int _id;
-    String _title;
-    String _icon;
-	private String _longtext;
-	long _timestamp;
-    long _reminder_timestamp;
-    boolean _dismissed;
+    public int id;
+    String title;
+    String icon;
+	private String longtext;
+	long timestamp;
+    long reminderTimestamp;
+    boolean dismissed;
  
     // constructor
     public NotificationItem(int id, String title, String longtext, String icon){
-        this._id = id;
-        this._title = title;
-        this._longtext = longtext;
-        this._icon = icon;
+        this.id = id;
+        this.title = title;
+        this.longtext = longtext;
+        this.icon = icon;
     }
 
     // constructor
     public NotificationItem(int id, String title, String longtext, String icon, long reminder_timestamp){
-        this._id = id;
-        this._title = title;
-        this._longtext = longtext;
-        this._icon = icon;
-        this._reminder_timestamp = reminder_timestamp;
+        this.id = id;
+        this.title = title;
+        this.longtext = longtext;
+        this.icon = icon;
+        this.reminderTimestamp = reminder_timestamp;
     }
  
     // constructor
     public NotificationItem(int id, String title, String icon){
-        this._id = id;
-        this._title = title;
-        this._icon = icon;
+        this.id = id;
+        this.title = title;
+        this.icon = icon;
     }
 
 	public NotificationItem() {
@@ -41,72 +41,72 @@ public class NotificationItem {
 
 	// getting ID
     public int getID(){
-        return this._id;
+        return this.id;
     }
  
     // setting id
     public void setID(int l){
-        this._id = l;
+        this.id = l;
     }
  
     // getting name
     public String getTitle(){
-        return this._title;
+        return this.title;
     }
  
     // setting name
     public void setTitle(String title){
-        this._title = title;
+        this.title = title;
     }
  
     // getting longtext
     public String getLongText(){
-        return this._longtext;
+        return this.longtext;
     }
  
     // setting longtext
     public void setLongText(String text){
-        this._longtext = text;
+        this.longtext = text;
     }
     
     // getting icon
     public String getIcon(){
-        return this._icon;
+        return this.icon;
     }
  
     // setting icon
     public void setIcon(String icon){
-        this._icon = icon;
+        this.icon = icon;
     }
     
     // getting time
     public long getTime(){
-        return this._timestamp;
+        return this.timestamp;
     }
  
     // setting time
     public void setTime(long time){
-        this._timestamp = time;
+        this.timestamp = time;
     }
 
     // getting reminder time
     public long getReminderTime(){
-        return this._reminder_timestamp;
+        return this.reminderTimestamp;
     }
 
     // setting reminder time
     public void setReminderTime(long time){
-        this._reminder_timestamp = time;
+        this.reminderTimestamp = time;
     }
 
     // getting dismissed state
     public boolean getDismissed(){
-        return this._dismissed;
+        return this.dismissed;
     }
 
     // setting dismissed state
     public void setDismissed(boolean b){
-        this._dismissed = b;
+        this.dismissed = b;
     }
  
 }
