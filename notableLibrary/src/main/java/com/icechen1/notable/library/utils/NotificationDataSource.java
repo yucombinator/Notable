@@ -138,12 +138,12 @@ public class NotificationDataSource {
 		NotificationItem item = new NotificationItem();
 		try{
 			item.setID(cursor.getInt(0));
-			item.setTitle((cursor.getString(1)));
-			item.setLongText((cursor.getString(2)));
-			item.setTime((cursor.getLong(3)));
-			item.setIcon((cursor.getString(4)));
-			item.setReminderTime((cursor.getLong(5)));
-			item.setDismissed((cursor.getInt(6)) == 1);
+			item.setTitle(cursor.getString(1));
+			item.setLongText(cursor.getString(2));
+			item.setTime(cursor.getLong(3));
+			item.setIcon(cursor.getString(4));
+			item.setReminderTime(cursor.getLong(5));
+			item.setDismissed(cursor.getInt(6) == 1);
 		}catch(Exception e){
 			Log.e("NOTABLE","Error with database cursor!");
 			return null;

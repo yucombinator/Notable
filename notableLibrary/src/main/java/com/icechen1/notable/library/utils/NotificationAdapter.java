@@ -66,7 +66,7 @@ public class NotificationAdapter extends CursorRecyclerViewAdapter<RecyclerView.
         final ViewHolder vh = (ViewHolder) holder;
         final int position = cursor.getPosition();
         final int id = cursor.getInt(0);
-        final boolean dismissed = ((cursor.getInt(6)) == 1);
+        final boolean dismissed = (cursor.getInt(6) == 1);
         final long alarm = cursor.getLong(5);
 
         vh.mTitle.setText(cursor.getString(1));
