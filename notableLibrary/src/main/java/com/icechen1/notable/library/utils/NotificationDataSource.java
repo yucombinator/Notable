@@ -15,7 +15,8 @@ import java.util.List;
 
 public class NotificationDataSource {
 
-    private final Context mContext;
+	public static final String TEXT_NOT_NULL = " text not null,";
+	private final Context mContext;
     // Database fields
 	private SQLiteDatabase database;
 	private SQLiteHelper dbHelper;
@@ -174,10 +175,10 @@ public class NotificationDataSource {
 		private static final String DATABASE_CREATE = "create table "
 				+ TABLE_NOTIFS + "(" + COLUMN_ID
 				+ " integer primary key autoincrement, "
-				+ COLUMN_TITLE + " text not null,"
-				+ COLUMN_LONGTEXT + " text not null,"
+				+ COLUMN_TITLE + TEXT_NOT_NULL
+				+ COLUMN_LONGTEXT + TEXT_NOT_NULL
 				+ COLUMN_TIME + " long not null,"
-				+ COLUMN_ICON + " text not null,"
+				+ COLUMN_ICON + TEXT_NOT_NULL
 				+ COLUMN_REMINDER_TIME+" LONG DEFAULT 0,"
 				+ COLUMN_DISMISSED+" INTEGER DEFAULT 0"
 				+ ");";

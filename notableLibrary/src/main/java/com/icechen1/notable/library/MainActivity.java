@@ -48,6 +48,7 @@ public class MainActivity
     extends FragmentActivity
     implements OnClickListener,DatePickerDialog.OnDateSetListener, TimePickerDialog.OnTimeSetListener
 {
+	public static final String CHECKMARK_GRAY = "checkmark_gray";
 	/* TODO
 	 * use ICS swipe circle for add confirmation
 	 * cardUI for main app
@@ -158,7 +159,7 @@ public class MainActivity
 	private void autoSaveNote(String sharedText) {
 		share_info = sharedText;
 		shareFields(share_info);
-		icon = "checkmark_gray";
+		icon = CHECKMARK_GRAY;
 		addBtn(null);
 	}
     private void shareFields(String share_info){
@@ -185,7 +186,7 @@ public class MainActivity
   		resetBkg();
   		icon = item.getIcon();
   		
-		if(icon.equals("checkmark_gray")) {
+		if(icon.equals(CHECKMARK_GRAY)) {
 	  		checkmark_gray.setSelected(true);
 		}
 		if(icon.equals("checkmark_orange")) {
@@ -310,7 +311,7 @@ public class MainActivity
 		addBtn.setEnabled(false);
 		addBtn.setClickable(false);
   		checkmark_gray.setSelected(true);
-  		icon = "checkmark_gray";
+  		icon = CHECKMARK_GRAY;
         // Request focus and show soft keyboard automatically
         editText.requestFocus();
         getWindow().setSoftInputMode(LayoutParams.SOFT_INPUT_STATE_VISIBLE);
@@ -479,7 +480,7 @@ public class MainActivity
     void checkmark_gray(){
         resetBkg();
 	  	checkmark_gray.setSelected(true);
-        icon = "checkmark_gray";
+        icon = CHECKMARK_GRAY;
     }
 
     @Click

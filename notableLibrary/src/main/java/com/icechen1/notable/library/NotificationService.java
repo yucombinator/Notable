@@ -25,7 +25,8 @@ import java.util.List;
 
 @EService
 public class NotificationService extends Service{
-    private final IBinder mBinder = new LocalBinder();
+	public static final String ACTION = "action";
+	private final IBinder mBinder = new LocalBinder();
     
     public class LocalBinder extends Binder {
     	NotificationService getService() {
@@ -53,8 +54,8 @@ public class NotificationService extends Service{
 			Log.e("NOTABLE","Error acquiring the Intent Bundle...");
 		}
 		if(action != null){
-			if(action.containsKey("action")){
-				String _action = action.getString("action");
+			if(action.containsKey(ACTION)){
+				String _action = action.getString(ACTION);
 				if (_action.equals("boot")){
 					bootAdd();
 				}else{
@@ -146,7 +147,7 @@ public class NotificationService extends Service{
         Intent intent = new Intent(this, com.icechen1.notable.library.NotificationService_.class);
 
         Bundle jBundle = new Bundle();
-        jBundle.putString("action", "alarm");
+        jBundle.putString(ACTION, "alarm");
         jBundle.putInt("id", notif._id);
         intent.putExtras(jBundle);
 
