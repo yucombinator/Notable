@@ -71,6 +71,7 @@ public class MainActivity
 	 * 
 	 */
 	static String TAG = "NOTABLE";
+	private static final int VOICE_RECOGNITION_REQUEST_CODE = 1234;
 
 	NotificationManager notificationManager;
 	private String icon;
@@ -80,8 +81,31 @@ public class MainActivity
     private Calendar reminderCalendar;
     private Toolbar mToolbar;
 
+	@ViewById
+	Button dateBtn;
+	@ViewById
+	Button TimeBtn;
 
-    @Override
+	@ViewById
+	ImageButton checkmark_gray;
+
+	@ViewById
+	ImageButton checkmark_green;
+
+	@ViewById
+	ImageButton checkmark_orange;
+
+	@ViewById
+	ImageButton checkmark_red;
+
+	@ViewById
+	RelativeLayout reminder_set;
+
+	@ViewById
+	RelativeLayout reminder_none;
+
+
+	@Override
 	public void onResume(){
 		super.onResume();
         Intent Intent = new Intent(this, com.icechen1.notable.library.NotificationService_.class);
@@ -278,11 +302,6 @@ public class MainActivity
     	
     }
 
-    @ViewById
-	Button dateBtn;
-    @ViewById
-    Button TimeBtn;
-
     void afterViews() {
     	final EditText editText = (EditText) findViewById(R.id.entryText);
     	final ImageButton addBtn = (ImageButton) findViewById(R.id.addBtn);
@@ -408,7 +427,6 @@ public class MainActivity
 		  }
 		  return true;
 	}
-    private static final int VOICE_RECOGNITION_REQUEST_CODE = 1234;
 
     public void startVoiceRecognition(View view) {
         Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
@@ -429,25 +447,7 @@ public class MainActivity
           editText.setText(firstMatch);
       }
     }
-      
-  	
-  	@ViewById
-	ImageButton checkmark_gray;
-  	
-  	@ViewById
-  	ImageButton checkmark_green;
-  	
-  	@ViewById
-  	ImageButton checkmark_orange;
-  	
-  	@ViewById
-  	ImageButton checkmark_red;
 
-    @ViewById
-	RelativeLayout reminder_set;
-
-    @ViewById
-    RelativeLayout reminder_none;
 
     @Click
     void dateBtn(){

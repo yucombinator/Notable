@@ -26,6 +26,12 @@ public class DetailActivity extends FragmentActivity {
 	private NotificationItem item;
 	private Toolbar mToolbar;
 
+	@ViewById
+	TextView notifText;
+
+	@ViewById
+	TextView alarmText;
+
 	@Override
 	public void onResume(){
 		super.onResume();
@@ -83,12 +89,7 @@ public class DetailActivity extends FragmentActivity {
 
 		super.onCreate(savedInstanceState);
 	}
-	@ViewById
-	TextView notifText;
 
-    @ViewById
-    TextView alarmText;
-	
     private void updateFields() {
 
 				/*
