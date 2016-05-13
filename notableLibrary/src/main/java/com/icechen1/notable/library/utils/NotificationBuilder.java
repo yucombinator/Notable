@@ -23,6 +23,7 @@
 	import java.util.Calendar;
 
 	public class NotificationBuilder {
+		public static final String NOTABLE = "Notable";
 		Context cxt;
 
         // Key for the string that's delivered in the action's intent
@@ -69,7 +70,7 @@
             // Build notification
             NotificationCompat.Builder notiBuilder = new NotificationCompat.Builder(cxt)
                     .setContentTitle(cxt.getResources().getString(R.string.add_long)) //TODO I8LN
-					.setContentText("Notable")
+					.setContentText(NOTABLE)
 					.setSmallIcon(smallicon)
 					.setContentIntent(pIntent)
 					.setPriority(NotificationCompat.PRIORITY_MIN)
@@ -102,11 +103,11 @@
 		@SuppressLint("NewApi")
 		public boolean buildNotif(NotificationItem item,boolean isAlarm){
 
-			Log.i("Notable", "Building id: " + item.getID());
+			Log.i(NOTABLE, "Building id: " + item.getID());
 
-			Log.i("Notable", "Building title: " + item.getTitle());
-			Log.i("Notable", "Building time: " + item.getTime());
-			Log.i("Notable", "Building icon: " + item.getIcon());
+			Log.i(NOTABLE, "Building title: " + item.getTitle());
+			Log.i(NOTABLE, "Building time: " + item.getTime());
+			Log.i(NOTABLE, "Building icon: " + item.getIcon());
 
 			int smallicon = R.drawable.ic_stat_status_icon;
 			int iconId = R.drawable.ic_checkmark_gray;
