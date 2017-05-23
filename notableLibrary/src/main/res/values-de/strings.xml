@@ -2,8 +2,8 @@
 <resources>
     <string name="app_name">Notable</string>
 <string name="menu_settings">Einstellungen</string>
-<string name="hint2">Neue Notiz...</string>
-<string name="more_apps">Mehr Apps</string>
+<string name="hint2">Neue Notiz …</string>
+<string name="more_apps">Weitere Apps</string>
 <string name="general">Allgemein</string>
 <string name="create_shortcut">Eine Verknüpfung in der Benachrichtigungsleiste anzeigen</string>
 <string name="toggle_shortcut">Schnellzugriff</string>
@@ -24,4 +24,38 @@
 <string name="choose">Eine Option auswählen</string> 
 <string name="add_long">Erinnerung hinzufügen</string> 
 <string name="dismiss_reminder">Erinnerung löschen</string>
+    <string name="hide_expandable_options">Knöpfe beim Erweitern anzeigen</string>
+    <string name="hide_expadable_description">(Android 4.1+) Aktionen anzeigen, wenn die Nachrichten erweitert werden</string>
+    <string name="low_prio">Geringe Priorität</string>
+    <string name="low_prio_info">(Andrid 4.1+) Erinnerungen am Ende der Liste anzeigen.</string>
+
+    <string name="priority">Priorität</string>
+    <string name="priority_info">(Andrid 4.1+)\n NORMAL: Erinnerungen erscheinen am Anfang der Liste.\n
+        GERING: Erinnerungen unterhalb der normalen Meldungen anzeigen.\n
+        NIEDRIG: Erinnerungen am Ende der Liste und in der Statusleiste keine Symbole anzeigen.</string>
+
+    <string name="DarkTheme">Dunkle Oberfläche</string>
+    <string name="donate_only">Nur in Notable Plus</string>
+    <string-array name="priority_choice">
+        <item>Normale Priorität</item>
+        <item>Geringe Priorität</item>
+        <item>Niedrigste Priorität (Keine Symbole in Statusleiste)</item>
+    </string-array>
+    <string name="theme">Oberfläche</string>
+    <string name="no_alarm">Kein Alarm eingestellt</string>
+    <string name="date">Datum</string>
+    <string name="time">Uhrzeit</string>
+    <string name="ringtone_info">Erinnerungston</string>
+    <string name="title_activity_history">Erinnerungsverlauf</string>
+    <string name="action_settings">Einstellungen</string>
+    <string name="section_format">Gruß aus dem Abschnitt: %1$d</string>
+    <string name="menu_history">Verlauf</string>
+    <string name="not_set">Nicht eingestellt</string>
+    <string name="no_history">Bisher keine Erinnerungen erstellt.</string>
+    <string name="deleted_item">Gelöscht</string>
+    <string name="undo">Rückgängig</string>
+    <string name="enable_history">Verlauf aktivieren</string>
+    <string name="enable_history_summary">Erledigte Erinnerungen im Verlauf behalten</string>
+    <string name="menu_share">App empfehlen</string>
+    <string name="share_message">Hi, schau Dir mal Notable als App für einfache Erinnerungen an: https://play.google.com/store/apps/details?id=com.icechen1.notable</string>
 </resources>
