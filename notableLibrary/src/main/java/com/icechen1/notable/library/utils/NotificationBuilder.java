@@ -143,7 +143,6 @@
 			}
 
             SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(cxt);
-			Integer pref = Integer.parseInt(prefs.getString("onClickAction", "2"));
 			//CREATE THE INTENT TO LAUNCH EDIT
 
 			Intent j = new Intent(cxt, com.icechen1.notable.library.MainActivity_.class);
@@ -162,20 +161,21 @@
 			PendingIntent spIntent = PendingIntent.getService(cxt, item.getID(), s, PendingIntent.FLAG_CANCEL_CURRENT);
 
 			//CREATE THE INTENT TO LAUNCH SERVICE
-			//INT 1 = DISMISS 2 = DETAIL 3=EDIT
 			PendingIntent pIntent;
-			if (pref == 2){
+            switch (prefs.getInt("onClickAction", 2)) {
+            case 2: // detail
 				Intent i = new Intent(cxt, com.icechen1.notable.library.DetailActivity_.class);
 				Bundle iBundle = new Bundle();
 				iBundle.putInt("id", item.getID());
 				i.putExtras(iBundle);
 				pIntent = PendingIntent.getActivity(cxt, item.getID(), i, PendingIntent.FLAG_CANCEL_CURRENT);
-			}else{
-				if (pref == 3){
-					pIntent = jIntent;
-				}else{
-					pIntent = spIntent;
-				}
+                break;
+            case 3: // edit
+                pIntent = jIntent;
+                break;
+            default: // dismiss
+                pIntent = spIntent;
+                break;
 			}
 
 			//build the title
