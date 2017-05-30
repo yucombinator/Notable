@@ -12,6 +12,8 @@
     <string name="donate">Upgrade to Plus</string>
     <string name="show_detail">Show detail screen</string>
     <string name="display_confirm">Display a detail screen when clicking on a notification.</string>
+    <string name="long_click_title">Stay on long click</string>
+    <string name="long_click_desc">Holding the save button saves the reminder and keeps the window open for the next one.</string>
 
     <string name="extension_title">Notable</string>
     <string name="extension_description">Displays your current reminders.</string>
