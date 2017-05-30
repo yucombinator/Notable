@@ -5,6 +5,7 @@
 	import android.app.PendingIntent;
 	import android.content.Context;
 	import android.content.Intent;
+	import android.content.SharedPreferences;
 	import android.graphics.Bitmap;
 	import android.graphics.BitmapFactory;
 	import android.net.Uri;
@@ -141,7 +142,8 @@
 				longtext+= alarmString;
 			}
 
-			Integer pref = Integer.parseInt(PreferenceManager.getDefaultSharedPreferences(cxt).getString("onClickAction", "2"));
+            SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(cxt);
+			Integer pref = Integer.parseInt(prefs.getString("onClickAction", "2"));
 			//CREATE THE INTENT TO LAUNCH EDIT
 
 			Intent j = new Intent(cxt, com.icechen1.notable.library.MainActivity_.class);
@@ -195,13 +197,13 @@
 					.setPriority(Notification.PRIORITY_HIGH)
 					.setWhen(item.getTime())
 					.setDeleteIntent(spIntent)
-					.setVisibility(Notification.VISIBILITY_SECRET)
+					.setVisibility(prefs.getBoolean("show_on_lock_screen", false) ? Notification.VISIBILITY_PRIVATE : Notification.VISIBILITY_SECRET)
 					.setLargeIcon(icon);
 			if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
 				builder.setGroup("notable");
 			}
 
-			if (PreferenceManager.getDefaultSharedPreferences(cxt).getBoolean("expand_buttons", true)){
+			if (prefs.getBoolean("expand_buttons", true)){
 				builder.addAction(R.drawable.ic_action_image_edit_dark, cxt.getResources().getString(R.string.edit), jIntent)
 						.addAction(R.drawable.ic_action_ic_done, cxt.getResources().getString(R.string.done), spIntent);
 						// setUsesChronometer option which subindication to display
@@ -211,7 +213,7 @@
 			Notification noti = builder.build();
 			noti.deleteIntent = spIntent;
 
-			if(PreferenceManager.getDefaultSharedPreferences(cxt).getString("priority", "normal").equals("low")){
+			if(prefs.getString("priority", "normal").equals("low")){
                 try{
                     //API 16+
                     if (Build.VERSION.SDK_INT > 15) {
@@ -222,7 +224,7 @@
                 }
 			}
 
-			if(PreferenceManager.getDefaultSharedPreferences(cxt).getString("priority", "normal").equals("min")){
+			if(prefs.getString("priority", "normal").equals("min")){
                 try{
                     //API 16+
                     if (Build.VERSION.SDK_INT > 15) {
@@ -248,16 +250,14 @@
 				noti.defaults |= Notification.DEFAULT_LIGHTS;
 
 				//Load the ringtone
-				String strRingtonePreference = PreferenceManager.getDefaultSharedPreferences(cxt).getString("notification_sound", "DEFAULT_SOUND");
+				String strRingtonePreference = prefs.getString("notification_sound", "DEFAULT_SOUND");
 				noti.sound = Uri.parse(strRingtonePreference);
 			}
 
             NotificationManagerCompat notificationManager = NotificationManagerCompat.from(cxt);
 			// Hide the notification after it's selected
 
-			if(PreferenceManager.getDefaultSharedPreferences(cxt).getBoolean("swipe", false)){
-
-			}else{
+			if (!prefs.getBoolean("swipe", false)) {
 				noti.flags |= Notification.FLAG_ONGOING_EVENT;
 				noti.flags |= Notification.FLAG_NO_CLEAR;
 			}

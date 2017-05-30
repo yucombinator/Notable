@@ -14,6 +14,8 @@
 <string name="display_confirm">Beim Tippen auf die Benachtichtigung ein Detailfenster anzeigen.</string>
     <string name="long_click_title">Bei Halten offen bleiben</string>
     <string name="long_click_desc">Beim Halten des Speichernkopfs wird die Erinnerung gespeichert und eine weitere kann eingegeben werden.</string>
+    <string name="on_lock_screen_title">Auf Sperrbildschirm anzeigen</string>
+    <string name="on_lock_screen_desc">Nachrichten auch bei gesperrtem Bildschirm anzeigen.</string>
 
 <string name="extension_title">Notable Erweiterung für DashClock</string>
 <string name="extension_description">Zeigt ihre aktuellen Erinnerungen an.</string>

@@ -16,6 +16,12 @@
             android:summary="@string/create_shortcut"
             android:title="@string/toggle_shortcut" />
         <SwitchPreference
+            android:defaultValue="false"
+            android:enabled="true"
+            android:key="show_on_lock_screen"
+            android:summary="@string/on_lock_screen_desc"
+            android:title="@string/on_lock_screen_title" />
+        <SwitchPreference
             android:defaultValue="true"
             android:enabled="true"
             android:key="enable_history"
