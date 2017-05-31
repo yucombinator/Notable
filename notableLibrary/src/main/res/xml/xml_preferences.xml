@@ -18,6 +18,13 @@
             android:title="@string/toggle_shortcut" />
 
         <SwitchPreference
+            android:defaultValue="false"
+            android:enabled="true"
+            android:key="show_on_lock_screen"
+            android:summary="@string/on_lock_screen_desc"
+            android:title="@string/on_lock_screen_title" />
+
+        <SwitchPreference
             android:defaultValue="true"
             android:enabled="true"
             android:key="enable_history"
@@ -35,6 +42,12 @@
             android:key="swipe"
             android:summary="@string/swiping_desc"
             android:title="@string/swiping_allow" />
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="save_on_long_click"
+            android:summary="@string/long_click_desc"
+            android:title="@string/long_click_title" />
         
         <ListPreference android:summary="@string/priority_info"
             android:title="@string/priority"

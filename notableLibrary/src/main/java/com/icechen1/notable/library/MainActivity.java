@@ -3,6 +3,7 @@ package com.icechen1.notable.library;
 
 import android.app.NotificationManager;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.content.res.TypedArray;
@@ -21,6 +22,7 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.View.OnLongClickListener;
 import android.view.WindowManager.LayoutParams;
 import android.widget.Button;
 import android.widget.EditText;
@@ -127,7 +129,8 @@ public class MainActivity
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState){
-		if (PreferenceManager.getDefaultSharedPreferences(this).getBoolean("dark_theme", false)){
+		SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+		if (prefs.getBoolean("dark_theme", false)){
 			setTheme(R.style.TransDarkAppTheme);
 		}
 
@@ -177,6 +180,15 @@ public class MainActivity
 	    	voiceBtn.setVisibility(View.GONE);
 	    }
 		
+        if (saved_id == -1 && prefs.getBoolean("save_on_long_click", false))
+            ((ImageView)findViewById(R.id.addBtn)).setOnLongClickListener(new OnLongClickListener() {
+                @Override
+                public boolean onLongClick(View v) {
+                    addAndStayBtn(v);
+                    return true;
+                }
+            });
+
 		super.onCreate(savedInstanceState);
 	}
 
@@ -237,7 +249,7 @@ public class MainActivity
 		
 	}
 
-	public void addBtn(View v) {
+    private void saveNotification() {
     	// Prepare intent which is triggered if the
     	// notification is selected
         
@@ -287,8 +299,16 @@ public class MainActivity
 		
         Intent.putExtras(mBundle);
         startService(Intent);
-        
+    }
+
+    public void addBtn(View v) {
+        saveNotification();
     	finish();
+    }
+
+    public void addAndStayBtn(View v) {
+        saveNotification();
+        ((EditText)findViewById(R.id.entryText)).setText("");
     }
     
     public void menuBtn(View v){
