@@ -179,7 +179,7 @@ public class MainActivity
 	    	voiceBtn.setVisibility(View.GONE);
 	    }
 		
-        if (saved_id == -1 && prefs.getBoolean("save_on_long_click", false))
+        if (savedId == -1 && prefs.getBoolean("save_on_long_click", false))
             ((ImageView)findViewById(R.id.addBtn)).setOnLongClickListener(new OnLongClickListener() {
                 @Override
                 public boolean onLongClick(View v) {

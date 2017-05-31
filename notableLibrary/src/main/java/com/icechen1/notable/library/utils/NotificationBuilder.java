@@ -162,7 +162,8 @@
 
 			//CREATE THE INTENT TO LAUNCH SERVICE
 			PendingIntent pIntent;
-            switch (prefs.getInt("onClickAction", 2)) {
+			String onCLickActionValue = prefs.getString("onClickAction", "2");
+            switch (Integer.parseInt(onCLickActionValue)) {
             case 2: // detail
 				Intent i = new Intent(cxt, com.icechen1.notable.library.DetailActivity_.class);
 				Bundle iBundle = new Bundle();

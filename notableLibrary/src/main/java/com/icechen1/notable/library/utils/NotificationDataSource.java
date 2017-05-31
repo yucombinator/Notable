@@ -15,8 +15,7 @@ import java.util.List;
 
 public class NotificationDataSource {
 
-	public static final String TEXT_NOT_NULL = " text not null,";
-	private final Context mContext;
+    private final Context mContext;
     // Database fields
 	private SQLiteDatabase database;
 	private SQLiteHelper dbHelper;
@@ -71,13 +70,13 @@ public class NotificationDataSource {
 		args.put(SQLiteHelper.COLUMN_TIME, Calendar.getInstance().getTimeInMillis());
 		args.put(SQLiteHelper.COLUMN_ICON, icon);
 
-		database.update(SQLiteHelper.TABLE_NOTIFS, args, "id=" + rowId, null);
+		database.update(SQLiteHelper.TABLE_NOTIFS, args, "_id=" + rowId, null);
 	}
 
 	public void setDismissed(long rowId, boolean dismissed) {
 		ContentValues args = new ContentValues();
 		args.put(SQLiteHelper.COLUMN_DISMISSED, dismissed ? 1 : 0);
-		database.update(SQLiteHelper.TABLE_NOTIFS, args, "id=" + rowId, null);
+		database.update(SQLiteHelper.TABLE_NOTIFS, args, "_id=" + rowId, null);
 
         //broadcast db change
         Intent intent = new Intent();
@@ -160,7 +159,7 @@ public class NotificationDataSource {
 	class SQLiteHelper extends SQLiteOpenHelper {
 
 		public static final String TABLE_NOTIFS = "NOTIF";
-		public static final String COLUMN_ID = "id";
+		public static final String COLUMN_ID = "_id";
 		public static final String COLUMN_TITLE = "title";
 		public static final String COLUMN_LONGTEXT = "longtext";
 		public static final String COLUMN_ICON = "icon";
@@ -175,10 +174,10 @@ public class NotificationDataSource {
 		private static final String DATABASE_CREATE = "create table "
 				+ TABLE_NOTIFS + "(" + COLUMN_ID
 				+ " integer primary key autoincrement, "
-				+ COLUMN_TITLE + TEXT_NOT_NULL
-				+ COLUMN_LONGTEXT + TEXT_NOT_NULL
+				+ COLUMN_TITLE + " text not null,"
+				+ COLUMN_LONGTEXT + " text not null,"
 				+ COLUMN_TIME + " long not null,"
-				+ COLUMN_ICON + TEXT_NOT_NULL
+				+ COLUMN_ICON + " text not null,"
 				+ COLUMN_REMINDER_TIME+" LONG DEFAULT 0,"
 				+ COLUMN_DISMISSED+" INTEGER DEFAULT 0"
 				+ ");";

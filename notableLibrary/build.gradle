@@ -7,7 +7,7 @@ android {
     buildToolsVersion '25.0.3'
     defaultConfig {
         minSdkVersion 14
-        targetSdkVersion 25
+        targetSdkVersion 21
     }
 }
 apt {
@@ -29,10 +29,10 @@ dependencies {
     //compile files('libs/nineoldandroids-2.4.0.jar')
     apt "org.androidannotations:androidannotations:$AAVersion"
     compile "org.androidannotations:androidannotations-api:$AAVersion"
-    compile 'com.android.support:support-v4:25.0.0'
-    compile 'com.android.support:appcompat-v7:23.1.1'
+    compile 'com.android.support:support-v4:25.3.1'
+    compile 'com.android.support:appcompat-v7:25.3.1'
     compile 'com.github.flavienlaurent.datetimepicker:library:+'
-    compile 'com.android.support:design:23.1.1'
+    compile 'com.android.support:design:25.3.1'
     compile 'com.github.mfornos:humanize-slim:1.2.2'
     compile 'com.github.AndroidDeveloperLB:MaterialPreferenceLibrary:5'
 }
