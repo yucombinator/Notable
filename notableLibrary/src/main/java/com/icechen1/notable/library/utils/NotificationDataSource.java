@@ -71,13 +71,13 @@ public class NotificationDataSource {
 		args.put(SQLiteHelper.COLUMN_TIME, Calendar.getInstance().getTimeInMillis());
 		args.put(SQLiteHelper.COLUMN_ICON, icon);
 
-		database.update(SQLiteHelper.TABLE_NOTIFS, args, "_id=" + rowId, null);
+		database.update(SQLiteHelper.TABLE_NOTIFS, args, "id=" + rowId, null);
 	}
 
 	public void setDismissed(long rowId, boolean dismissed) {
 		ContentValues args = new ContentValues();
 		args.put(SQLiteHelper.COLUMN_DISMISSED, dismissed ? 1 : 0);
-		database.update(SQLiteHelper.TABLE_NOTIFS, args, "_id=" + rowId, null);
+		database.update(SQLiteHelper.TABLE_NOTIFS, args, "id=" + rowId, null);
 
         //broadcast db change
         Intent intent = new Intent();
@@ -160,7 +160,7 @@ public class NotificationDataSource {
 	class SQLiteHelper extends SQLiteOpenHelper {
 
 		public static final String TABLE_NOTIFS = "NOTIF";
-		public static final String COLUMN_ID = "_id";
+		public static final String COLUMN_ID = "id";
 		public static final String COLUMN_TITLE = "title";
 		public static final String COLUMN_LONGTEXT = "longtext";
 		public static final String COLUMN_ICON = "icon";

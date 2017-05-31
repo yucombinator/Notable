@@ -76,8 +76,8 @@ public class MainActivity
 
 	NotificationManager notificationManager;
 	private String icon;
-	private int saved_id;
-	private String share_info;
+	private int savedId;
+	private String shareInfo;
     private boolean useAlarm = false;
     private Calendar reminderCalendar;
     private Toolbar mToolbar;
@@ -88,23 +88,22 @@ public class MainActivity
 	Button TimeBtn;
 
 	@ViewById
-	ImageButton checkmark_gray;
+	ImageButton checkmarkGray;
 
 	@ViewById
-	ImageButton checkmark_green;
+	ImageButton checkmarkGreen;
 
 	@ViewById
-	ImageButton checkmark_orange;
+	ImageButton checkmarkOrange;
 
 	@ViewById
-	ImageButton checkmark_red;
+	ImageButton checkmarkRed;
 
 	@ViewById
-	RelativeLayout reminder_set;
+	RelativeLayout reminderSet;
 
 	@ViewById
-	RelativeLayout reminder_none;
-
+	RelativeLayout reminderNone;
 
 	@Override
 	public void onResume(){
@@ -138,9 +137,9 @@ public class MainActivity
 		
 		//EDIT NOTIF
 		try {
-			saved_id = saved.getInt("id",-1);
+			savedId = saved.getInt("id",-1);
 		} catch(Exception e){
-			saved_id = -1;
+			savedId = -1;
 		}
 
 		//RECEIVER INTENT
@@ -154,7 +153,7 @@ public class MainActivity
 	        if ("text/plain".equals(type)) {
 	        	String sharedText = intent.getStringExtra(Intent.EXTRA_TEXT);
 	            if (sharedText != null) {
-	            	share_info = sharedText;
+	            	shareInfo = sharedText;
 	            }
 	        }
 	    } else if(("com.google.android.gm.action.AUTO_SEND").equals(action) && type != null) {
@@ -181,8 +180,8 @@ public class MainActivity
 	}
 
 	private void autoSaveNote(String sharedText) {
-		share_info = sharedText;
-		shareFields(share_info);
+		shareInfo = sharedText;
+		shareFields(shareInfo);
 		icon = CHECKMARK_GRAY;
 		addBtn(null);
 	}
@@ -195,7 +194,7 @@ public class MainActivity
 		//
 		NotificationDataSource datasource = new NotificationDataSource(this);
 		datasource.open();
-		NotificationItem item = datasource.getItem(saved_id);
+		NotificationItem item = datasource.getItem(savedId);
 		datasource.close();
 		//Log.i(TAG, item.getLongText());
     	final EditText editText = (EditText) findViewById(R.id.entryText);
@@ -211,16 +210,16 @@ public class MainActivity
   		icon = item.getIcon();
   		
 		if(icon.equals(CHECKMARK_GRAY)) {
-	  		checkmark_gray.setSelected(true);
+	  		checkmarkGray.setSelected(true);
 		}
-		if(icon.equals("checkmark_orange")) {
-			checkmark_orange.setSelected(true);
+		if(icon.equals("checkmarkOrange")) {
+			checkmarkOrange.setSelected(true);
 		}
-		if(icon.equals("checkmark_red")) {
-			checkmark_red.setSelected(true);
+		if(icon.equals("checkmarkRed")) {
+			checkmarkRed.setSelected(true);
 		}
-		if(icon.equals("checkmark_green")) {
-			checkmark_green.setSelected(true);
+		if(icon.equals("checkmarkGreen")) {
+			checkmarkGreen.setSelected(true);
 		}
 
         //Create the reminder time calendar object according to last saved time
@@ -229,8 +228,8 @@ public class MainActivity
             //Show it
             dateBtn.setText(DateFormat.getDateFormat(this).format(reminderCalendar.getTime()));
             TimeBtn.setText(DateFormat.getTimeFormat(this).format(reminderCalendar.getTime()));
-            reminder_set.setVisibility(View.VISIBLE);
-            reminder_none.setVisibility(View.GONE);
+            reminderSet.setVisibility(View.VISIBLE);
+            reminderNone.setVisibility(View.GONE);
             useAlarm = true;
         }
 
@@ -257,8 +256,8 @@ public class MainActivity
     	Log.d(TAG, firstLine);
     	
     	String longText;
-    	if (share_info != null)
-    		longText = share_info;
+    	if (shareInfo != null)
+    		longText = shareInfo;
     	else if (lineBreakPos != -1)
     		longText = inputText.substring(lineBreakPos + 1);
     	else
@@ -277,8 +276,8 @@ public class MainActivity
         } */
         
         //Delete old notif if editing
-		if(saved_id != -1){
-	        mBundle.putInt("old_noif_id", saved_id);	
+		if(savedId != -1){
+	        mBundle.putInt("old_noif_id", savedId);
 		}
         if(useAlarm){
             //Pass the calendar object to the intent bundle
@@ -326,10 +325,10 @@ public class MainActivity
 		// Inflate a menu to be displayed in the toolbar
         mToolbar.inflateMenu(R.menu.activity_main);
 
-    	//icon = "checkmark_gray";
+    	//icon = "checkmarkGray";
 		addBtn.setEnabled(false);
 		addBtn.setClickable(false);
-  		checkmark_gray.setSelected(true);
+  		checkmarkGray.setSelected(true);
   		icon = CHECKMARK_GRAY;
         // Request focus and show soft keyboard automatically
         editText.requestFocus();
@@ -364,9 +363,9 @@ public class MainActivity
         }); 
 
 		
-		if(share_info != null){
+		if(shareInfo != null){
 			Log.i(TAG, "Received an share intent...");
-			shareFields(share_info);		
+			shareFields(shareInfo);
 		}
 
         //Create the reminder time calendar object
@@ -379,8 +378,8 @@ public class MainActivity
         dateBtn.setText(DateFormat.getDateFormat(this).format(reminderCalendar.getTime()));
         TimeBtn.setText(DateFormat.getTimeFormat(this).format(reminderCalendar.getTime()));
 
-        if(saved_id != -1){
-            Log.i(TAG, "Loading from database: " + saved_id);
+        if(savedId != -1){
+            Log.i(TAG, "Loading from database: " + savedId);
             updateFields();
         }
     }
@@ -449,7 +448,6 @@ public class MainActivity
       }
     }
 
-
     @Click
     void dateBtn(){
         final Calendar calendar = Calendar.getInstance();
@@ -465,48 +463,48 @@ public class MainActivity
 
     @Click
     void reminderAddBtn(){
-        reminder_set.setVisibility(View.VISIBLE);
-        reminder_none.setVisibility(View.GONE);
+        reminderSet.setVisibility(View.VISIBLE);
+        reminderNone.setVisibility(View.GONE);
         useAlarm = true;
     }
     @Click
     void cancelAlarmSet(){
-        reminder_set.setVisibility(View.GONE);
-        reminder_none.setVisibility(View.VISIBLE);
+        reminderSet.setVisibility(View.GONE);
+        reminderNone.setVisibility(View.VISIBLE);
         useAlarm = false;
     }
 
   	@Click
     void checkmark_gray(){
         resetBkg();
-	  	checkmark_gray.setSelected(true);
+	  	checkmarkGray.setSelected(true);
         icon = CHECKMARK_GRAY;
     }
 
     @Click
     void checkmark_green(){
         resetBkg();
-		checkmark_green.setSelected(true);
-        icon= "checkmark_green";
+		checkmarkGreen.setSelected(true);
+        icon= "checkmarkGreen";
     }
     @Click
     void checkmark_orange(){
         resetBkg();
-		checkmark_orange.setSelected(true);
-        icon= "checkmark_orange";
+		checkmarkOrange.setSelected(true);
+        icon= "checkmarkOrange";
     }
     @Click
     void checkmark_red(){
         resetBkg();
-		checkmark_red.setSelected(true);
-        icon= "checkmark_red";
+		checkmarkRed.setSelected(true);
+        icon= "checkmarkRed";
     }
 
     public void resetBkg(){
-		checkmark_gray.setSelected(false);
-		checkmark_green.setSelected(false);
-		checkmark_orange.setSelected(false);
-		checkmark_red.setSelected(false);
+		checkmarkGray.setSelected(false);
+		checkmarkGreen.setSelected(false);
+		checkmarkOrange.setSelected(false);
+		checkmarkRed.setSelected(false);
 
     }
 
