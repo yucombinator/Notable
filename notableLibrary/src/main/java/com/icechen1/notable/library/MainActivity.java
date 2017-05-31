@@ -48,7 +48,7 @@ public class MainActivity
     extends FragmentActivity
     implements OnClickListener,DatePickerDialog.OnDateSetListener, TimePickerDialog.OnTimeSetListener
 {
-	public static final String CHECKMARK_GRAY = "checkmark_gray";
+
 	/* TODO
 	 * use ICS swipe circle for add confirmation
 	 * cardUI for main app
@@ -182,7 +182,7 @@ public class MainActivity
 	private void autoSaveNote(String sharedText) {
 		shareInfo = sharedText;
 		shareFields(shareInfo);
-		icon = CHECKMARK_GRAY;
+		icon = NotificationItem.CHECKMARK_GRAY;
 		addBtn(null);
 	}
     private void shareFields(String share_info){
@@ -209,16 +209,16 @@ public class MainActivity
   		resetBkg();
   		icon = item.getIcon();
   		
-		if(icon.equals(CHECKMARK_GRAY)) {
+		if(icon.equals(NotificationItem.CHECKMARK_GRAY)) {
 	  		checkmarkGray.setSelected(true);
 		}
-		if(icon.equals("checkmarkOrange")) {
+		if(icon.equals(NotificationItem.CHECKMARK_ORANGE)) {
 			checkmarkOrange.setSelected(true);
 		}
-		if(icon.equals("checkmarkRed")) {
+		if(icon.equals(NotificationItem.CHECKMARK_RED)) {
 			checkmarkRed.setSelected(true);
 		}
-		if(icon.equals("checkmarkGreen")) {
+		if(icon.equals(NotificationItem.CHECKMARK_GREEN)) {
 			checkmarkGreen.setSelected(true);
 		}
 
@@ -329,7 +329,7 @@ public class MainActivity
 		addBtn.setEnabled(false);
 		addBtn.setClickable(false);
   		checkmarkGray.setSelected(true);
-  		icon = CHECKMARK_GRAY;
+  		icon = NotificationItem.CHECKMARK_GRAY;
         // Request focus and show soft keyboard automatically
         editText.requestFocus();
         getWindow().setSoftInputMode(LayoutParams.SOFT_INPUT_STATE_VISIBLE);
@@ -478,26 +478,26 @@ public class MainActivity
     void checkmark_gray(){
         resetBkg();
 	  	checkmarkGray.setSelected(true);
-        icon = CHECKMARK_GRAY;
+        icon = NotificationItem.CHECKMARK_GRAY;
     }
 
     @Click
     void checkmark_green(){
         resetBkg();
 		checkmarkGreen.setSelected(true);
-        icon= "checkmarkGreen";
+        icon= NotificationItem.CHECKMARK_GREEN;
     }
     @Click
     void checkmark_orange(){
         resetBkg();
 		checkmarkOrange.setSelected(true);
-        icon= "checkmarkOrange";
+        icon= NotificationItem.CHECKMARK_ORANGE;
     }
     @Click
     void checkmark_red(){
         resetBkg();
 		checkmarkRed.setSelected(true);
-        icon= "checkmarkRed";
+        icon= NotificationItem.CHECKMARK_RED;
     }
 
     public void resetBkg(){

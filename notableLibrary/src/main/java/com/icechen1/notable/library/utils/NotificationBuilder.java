@@ -111,13 +111,13 @@
 
 			int smallicon = R.drawable.ic_stat_status_icon;
 			int iconId = R.drawable.ic_checkmark_gray;
-			if (item.getIcon().equals("checkmark_gray")) {
+			if (item.getIcon().equals(NotificationItem.CHECKMARK_GRAY)) {
 				// Do nothing
-			} else if (item.getIcon().equals("checkmark_orange"))
+			} else if (item.getIcon().equals(NotificationItem.CHECKMARK_ORANGE))
 				iconId = R.drawable.ic_checkmark_orange;
-			else if (item.getIcon().equals("checkmark_red"))
+			else if (item.getIcon().equals(NotificationItem.CHECKMARK_RED))
 				iconId = R.drawable.ic_checkmark_red;
-			else if (item.getIcon().equals("checkmark_green"))
+			else if (item.getIcon().equals(NotificationItem.CHECKMARK_GREEN))
 				iconId = R.drawable.ic_checkmark_green;
 			Bitmap icon = BitmapFactory.decodeResource(cxt.getResources(), iconId);
 

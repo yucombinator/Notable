@@ -1,7 +1,11 @@
 package com.icechen1.notable.library.utils;
 
 public class NotificationItem {
- 
+    public static final String CHECKMARK_GRAY = "checkmark_gray";
+    public static final String CHECKMARK_ORANGE = "checkmark_orange";
+    public static final String CHECKMARK_RED = "checkmark_red";
+    public static final String CHECKMARK_GREEN = "checkmark_green";
+
     //private variables
     public int id;
     String title;
