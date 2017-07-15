@@ -19,7 +19,7 @@
     <string name="extension_description">Afficher les mémos en cours.</string>
     <string name="settings">Paramètres</string>
     <string name="add">Ajouter</string> 
-    <string name="edit">Editer</string> 
+    <string name="edit">Éditer</string> 
     <string name="done">Terminé</string> 
     <string name="onclick_text">Notification sur clic</string> 
     <string name="onclick_description">Que faire sur une notification.</string> 
@@ -28,8 +28,42 @@
     <string name="dismiss_reminder">Supprimer un mémo ...</string> 
     <string name="hide_expandable_options">Afficher les commandes extensibles</string> 
     <string name="hide_expadable_description">(Android 4.1+) Afficher les commandes sur mémo développé</string>
-    
+    <string name="low_prio">Priorité basse</string>
+    <string name="low_prio_info">(Andrid 4.1+) Afficher les notifications à la fin de l\'écran des notofications.</string>  
+  
+    <string name="priority">Priorité</string> 
+    <string name="priority_info">(Andrid 4.1+)\n NORMALE : Les notifications s\'affichent en haut de l\'écran des notifications.\n
+        FAIBLE : Les notifications Notable s\'affichent sous les notifications par défaut sur l\'écran des notifications.\n
+        MINIMUM: Les notifications s\'affichent à la fin de l\'écran des notifications et cachent les icônes dans la barre d\'état.</string>
+  
     <string name="DarkTheme">Thème obscur</string>
     <string name="donate_only">Pour les donateurs seulement</string>
-    
+    <string-array name="priority_choice">
+        <item>Priorité Normale</item>
+        <item>Priorité Faible</item>
+        <item>Priorité Minimale (Masque les icônes dans la barre d\'état)</item>
+    </string-array>
+    <string-array name="priority_values"> <!-- Do not translate! -->
+        <item>normal</item>
+        <item>low</item>
+        <item>min</item>
+    </string-array>
+    <string name="theme">Thème</string>
+    <string name="no_alarm">Pas d\'Alarme</string>
+    <string name="date">Date</string>
+    <string name="time">Heure</string>
+    <string name="alarm">ALARME</string>
+    <string name="ringtone_info">Sonnerie</string>
+    <string name="title_activity_history">HistoryActivity</string>
+    <string name="action_settings">Paramètres</string>
+    <string name="section_format">Hello World de la section : %1$d</string>
+    <string name="menu_history">Historique</string>
+    <string name="not_set">Non Défini</string>
+    <string name="no_history">Aucun mémo pour l\'instant.</string>
+    <string name="deleted_item">Supprimé</string>
+    <string name="undo">Annuler</string>
+    <string name="enable_history">Activer l\'Historique</string>
+    <string name="enable_history_summary">Enregistrer les notifications supprimées dans l\'historique</string>
+    <string name="menu_share">Recommender l\'app</string>
+<string name="share_message">Hey, va voir Notable - une application pour créer des mémos rapides : https://play.google.com/store/apps/details?id=com.icechen1.notable</string>
 </resources>
