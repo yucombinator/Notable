@@ -9,6 +9,7 @@ import android.content.pm.ResolveInfo;
 import android.content.res.TypedArray;
 import android.graphics.Color;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.speech.RecognizerIntent;
@@ -302,7 +303,11 @@ public class MainActivity
 
     public void addBtn(View v) {
         saveNotification();
-    	finish();
+        if(Build.VERSION.SDK_INT >= 21){
+            finishAndRemoveTask();
+        } else {
+            finish();
+        }
     }
 
     public void addAndStayBtn(View v) {
